@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=K2D');
+
+*{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+
+h1, h4{
+  color: white;
+}
+
+body{
+  font-family: 'K2D', sans-serif;
+  background-color: black;
+  color: var(--color-primary);
+}
+
+
+/* Categorie Section */
+
+.Categories{
+  height: 100vh;
+  overflow: hidden;
+}
+
+.Categories .categories__  img{
+  height: 100vh;
+  position: relative;
+}
+
+.Categories .categories__ .text{
+  width: 65%;
+}
+
+.Categories .categories__ .text h1{
+  font-size: 38px;
+  font-weight: 900;
+}
+
+.Categories .categories__ .text h4{
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.Categories .categories__ .Cards{
+  transition: transform 0.2s ease;
+  transform-origin: 50% 50%;
+  cursor: pointer;
+  z-index:0;
+}
+
+.Categories .categories__ .Cards:hover {
+  -moz-transform:scale(1.08);
+  -o-transform:scale(1.08);
+  -webkit-transform:scale(1.08);
+  filter: brightness(120%);
+  z-index:1;
+}
+
+.Cards:not(:hover){
+  filter: brightness(100%);
+}
+
+
+.Previous{
+  position: absolute;
+  top: 30px;
+  left: 10px;
+  font-size: 30px;
+  color: white;
+  z-index: 100;
+}
+

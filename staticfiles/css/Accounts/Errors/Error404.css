@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=K2D');
+
+*{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow-x:hidden;
+  scroll-behavior: smooth;
+} 
+
+
+body{
+  font-family: 'K2D', sans-serif;
+  background-color: rgb(28, 28, 28);
+  color: var(--color-primary);
+}
+
+
+section, main{
+  height: 100vh;
+  width: 100%;
+}
+
+
+main{
+  position: relative;
+}
+
+
+.Oops{
+  background-image: url("/static/images/404/404_error.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.title{
+  display: flex;
+  position: absolute;
+  right: 0%;
+  bottom: 0;
+  top: 0;
+  left: 20%;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.title h1{
+  font-size: 112px;
+  color: #5F7CB7;
+}
+
+.title h2{
+  font-size: 52px;
+}
+
+.title h4{
+  font-size: 23px;
+}
+
+a{
+  font-size: 25px;
+  font-weight: 900;
+  color: white;
+  width: 260px;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 50px;
+  /* align-items: center; */
+  height: 54px;
+  align-content: center;
+  border-radius: 15px;
+}
+
+.return_page{
+  background-color: black;
+}
+
+.return_page:hover{
+  background-color: #5F7CB7;
+  color: rgb(0, 0, 0);
+}
+
+
+.return_home_page{
+  border: solid #A09F6D 4.3px;
+  color: black;
+  line-height: 40px;
+}
+
+.return_home_page:hover{
+  background-color: #A09F6D;
+  color: white;
+
+}
+
+
+@media only screen and (min-width:280px) and (max-width:846px) {
+  .title{
+    left: 0;
+  }
+
+  .title h1 {
+    font-size: 75px;
+  }
+
+  .title h2 {
+    font-size: 24px;
+  }
+
+  .title h4 {
+    font-size: 13px;
+}
+
+a{
+  font-size: 13px;
+  width: 156px;
+  height: 48px;
+  line-height: 43px;
+}
+
+.return_home_page {
+  line-height: 35px;
+}
+}
+
+
+@media only screen and (min-width:280px) and (max-width:645px) {
+  .title{
+    left: 0;
+  }
+
+  .title h1 {
+    font-size: 116px;
+  }
+
+  .title h2 {
+    font-size: 39px;
+  }
+
+  .title h4 {
+    font-size: 22px;
+}
+
+a{
+  font-size: 21px;
+  width: 248px;
+  height: 51px;
+  line-height: 50px;
+}
+
+.return_home_page {
+  line-height: 40px;
+}
+}

@@ -1,0 +1,599 @@
+@import url('https://fonts.googleapis.com/css2?family=K2D');
+
+*{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow-x:hidden;
+  scroll-behavior: smooth;
+} 
+
+:root{
+  --color-primary: black;
+  --color-secondary : #a37c5f;
+
+  --container-width-lg: 100%;
+  --container-width-md: 90%;
+  --container-width-sm: 94%;
+}
+
+body{
+  font-family: 'K2D', sans-serif;
+  background-color: rgb(28, 28, 28);
+  color: var(--color-primary);
+}
+
+h3, h1, label, span ,h4, p{
+  color: black;
+}
+
+
+
+.container{
+  height: 100vh;
+  margin: 0 auto;
+}
+
+.background{
+  background-size: cover;
+}
+
+/* Change the white to any color */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active  {
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+
+/* Login flex */
+.Login .Login__{
+  display: flex;
+  flex-direction: row-reverse;
+  background-color: white;
+  width: 75%;
+  height: 90vh;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+
+/* Login image side */
+.Login .Login__ .Login-portrait{
+  position: relative;
+  flex-basis: 50%;
+  height: 100%;
+  background-image: url("/static/images/Login/Login.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+/* Login image side paragraph */
+.Login .Login__ .Login-portrait .title{
+  position: absolute;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  padding: 0 15px 40px 15px;
+  gap: 1.87em;
+  bottom: 0;
+    left: 0;
+}
+
+
+/* Login image side title */
+.Login .Login__ .Login-portrait h2{
+  font-size: 47px;
+  font-weight: 800;
+}
+
+.Login .Login__ .Login-portrait p, h2{
+  color: white;
+}
+
+
+/* Login Form side */
+.Login .Login__ .Login-info{
+  position: relative;
+  flex-basis: 50%;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.Login .Login__ .Login-info .info__{
+  height: 100%;
+}
+
+/* Login Form flexbox side */
+.Login .Login__ .Login-info .info__ form{
+  position: absolute;
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 70%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.Login .Login__ .Login-info .info__ form .welcome__ {
+  width: 100%;
+}
+
+.Login .Login__ .Login-info .info__ form .welcome__ .title{
+  display: flex;
+  align-items:center;
+  width: 110%;
+}
+
+.Login .Login__ .Login-info .info__ form .welcome__ .title span{
+  display: none;
+}
+
+.Login .Login__ .Login-info .info__ form .welcome__ .title img{
+  width: 130px;
+  margin-top: 15.3px;
+  padding: 0 6px 0 0;
+  filter: brightness(0) saturate(100%) invert(49%) sepia(21%) saturate(666%) hue-rotate(343deg) brightness(100%) contrast(89%);
+  display: block;
+}
+
+/* Google and Github button  */
+.Login .Login__ .Login-info .info__ form .welcome__ .google-button a{
+  border-radius: 12px;
+  color: white;
+  background-color: #000;
+}
+
+.Login .Login__ .Login-info .info__ form .welcome__ .google-button a:hover{
+  color: white;
+  background-color: #775b46;
+}
+
+
+/* Title */
+.Login .Login__ .Login-info .info__ form .welcome__ h3{
+  font-size: 32px;
+  font-weight: 900;
+  text-align: start;
+  text-transform:capitalize;
+}
+
+.Login .Login__ .Login-info .info__ form .welcome__ p{
+  color: rgb(51, 51, 51);
+  padding-bottom: 8px;
+}
+
+/* Login Form "or" between line */
+.Login .Login__ .Login-info .info__ form .welcome__ #or span{
+  display: flex;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  font-weight: 900;
+}
+
+.Login .Login__ .Login-info .info__ form .welcome__ #or span::before,
+.Login .Login__ .Login-info .info__ form .welcome__ #or span::after {
+  content: '';
+  flex: 1;
+  border-bottom: 2px solid #000;
+}
+
+.Login .Login__ .Login-info .info__ form .welcome__ #or span:not(:empty)::before {
+  margin-right: .25em;
+}
+
+.Login .Login__ .Login-info .info__ form .welcome__ #or span:not(:empty)::after {
+  margin-left: .25em;
+}
+
+/* Login animation and icons ofr Username and password */
+
+.Login .Login__ .Login-info .info__ form .user-box{
+  position: relative;
+  width: 100%;
+  padding: 0 0 17px 0;
+}
+
+#Email-box{
+  width: 100%;
+  background: url("/static/images/Icons/Email.png") no-repeat scroll 0px 13.5px;
+  background-size: 20px 20px;
+  padding-left: 33px;
+}
+
+
+#Password-box{
+  background: url("/static/images/Icons/Password.png") no-repeat scroll 0px 13.5px;
+  background-size: 21px 21px;
+  padding-left: 33px;
+  width: 100%;
+  
+  
+
+}
+
+.Login .Login__ .Login-info .info__ .user-box input {
+  position: relative;
+  font-size: 16px;
+  color: #866750;
+  border: none;
+  border-bottom: 1.8px solid #a27c61;
+  outline: none;
+  caret-color: transparent;
+  font-weight: bold;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box; 
+}
+
+.Login .Login__ .Login-info .info__ .user-box label{
+  position: absolute;
+  top:0;
+  left: 35px;
+  padding: 10px 0;
+  font-size: 18px;
+  font-weight:lighter;
+  color: black;
+  pointer-events: none;
+  transition: .2s;
+}
+
+
+.Login .Login__ .Login-info .info__ .user-box input:focus ~ label ,
+.Login .Login__ .Login-info .info__ .user-box input:valid ~ label {
+    top: -20px;
+    left: 0;
+    font-size: 12px;
+    font-weight: bold;
+    color: var(--color-secondary);
+}
+
+
+
+.Login .Login__ .Login-info .info__ .user-box #email-Validation{
+  font-weight: 900;
+  filter: brightness(0) saturate(100%) invert(49%) sepia(21%) saturate(666%) hue-rotate(343deg) brightness(100%) contrast(89%);
+}
+
+
+/* Login parametre */
+
+.Login .Login__ .Login-info .info__ .login-parametre{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 0 0 10px 0;
+}
+
+
+/* Login checkbox */
+.Login .Login__ .Login-info .info__ .login-parametre .checking-terms  label{
+  color: #000;
+}
+
+.Login .Login__ .Login-info .info__ .login-parametre .checking-terms  label input[type="checkbox"] {
+  border: 2px solid black;
+  opacity: 1;
+  position: relative;
+  vertical-align: middle;/*Newly added*/
+  accent-color: #535F68;
+}
+
+/* Login button */
+.Login .Login__ .Login-info .info__ button{
+  width: 100%;
+  height: 34px;
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.Login .Login__ .Login-info .info__ button:hover{
+  background-color: #775b46;
+  transition: 0.2s;
+}
+
+/* Signe in link */
+.Login .Login__ .Login-info .info__ .sign-in{
+  margin: 0 auto;
+  padding: 0;
+}
+
+/* Don't have an account phrase */
+.Login .Login__ .Login-info .info__ h4{
+  font-size: 10px;
+  color: rgb(51, 51, 51);
+  font-weight: 700;
+}
+
+/* For all the link in the form */
+
+.Login .Login__ .Login-info .info__ a{
+  font-size: 15px;
+  font-weight: 900;
+  color: #a37c5f;
+}
+
+.Login .Login__ .Login-info .info__ a:hover{
+  color: #000;
+}
+
+
+/* Responsive */
+@media only screen and (max-width:1286px){
+  .Login .Login__ .Login-info .info__ form {
+    width: 85%;
+  }
+}
+
+@media only screen and (max-width:1062px){
+  .Login .Login__ .Login-portrait{
+    flex-basis: 37%;
+  }
+
+  .Login .Login__ .Login-info{
+    flex-basis: 63%;
+  }
+
+  .Login .Login__ .Login-info .info__ h4 {
+    font-size: 0.52em;
+  }
+
+  .Login .Login__ .Login-info .info__ form {
+    width: 74%;
+  }
+
+  .Login .Login__ .Login-info .info__ form .user-box{
+    padding-bottom: 5px;
+  }
+}
+/* tablet, landscape iPad, lo-res laptops ands desktops */
+@media only screen and (max-width:962px) {
+  .Login .Login__{
+    width: 95%;
+    height: 95vh;
+  }
+
+  .Login .Login__ .Login-info .info__ form .welcome__ h3,p{
+    text-align: center;
+  }
+
+  .Login .Login__ .Login-portrait{
+    flex-basis: 37%;
+    padding: 10px 20px;
+    text-align: start;
+  }
+
+  .Login .Login__ .Login-portrait p{
+    text-align: start;
+  }
+
+  .Login .Login__ .Login-info{
+    flex-basis: 63%;
+  }
+
+  .Login .Login__ .Login-info .info__ form .user-box span{
+    font-size: 0.62em ;
+  }
+
+  .Login .Login__ .Login-info .info__ form {
+    width: 88%;
+  }
+
+  .Login .Login__ .Login-info .info__ form .welcome__ .title{
+    justify-content: center;
+  }
+
+  .Login .Login__ .Login-info .info__ .user-box #email-Validation {
+    font-size: 15px;
+  }
+
+  .Login .Login__ .Login-info .info__ .login-parametre{
+    padding-bottom: 0.75em;
+  }
+
+  .Login .Login__ .Login-info .info__ form .user-box{
+    padding: 0 0 0.81em 0;
+  }
+}
+/* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+@media only screen and (max-width:668px){
+  .Login .Login__ .Login-info .info__ form .user-box{
+    padding: 0 0 8px 0;
+  }
+
+  .Login .Login__ .Login-info .info__ form .welcome__ .title{
+    display: block;
+    width: 100%;
+
+  }
+
+  .Login .Login__ .Login-portrait{
+    background-image: url("/static/images/Login/Login-For-Mobile.jpg");
+    padding: 33px 51px;
+
+  }
+  
+  .Login .Login__ .Login-info .info__ form .bottom{
+    display: none;
+  }
+
+  .Login .Login__ .Login-info .info__ .user-box #email-Validation {
+    font-size: 15px;
+  }
+
+  .Login .Login__ .Login-info .info__ h4 {
+    font-size: 0.90em;
+}
+
+  .Login .Login__ .Login-info .info__ form .welcome__ .title span{
+    display: block;
+  }
+
+  .Login .Login__ .Login-info .info__ form .welcome__ .title img{
+    display: none;
+}
+
+}
+
+@media only screen and (max-width:575px){
+  .Login .Login__{
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+  }
+
+  .Login .Login__ .Login-portrait{
+    position: relative;
+    width: 100%;
+    background-image: url("/static/images/Login/Login-For-Mobile-two.jpg");
+  }
+
+  .Login .Login__ .Login-portrait h2{
+    position: absolute;
+    bottom: 0;
+  }
+
+  .Login .Login__ .Login-portrait p{
+    display: none;
+  }
+
+  .Login .Login__ .Login-info {
+    width: 100%;
+  }
+
+  .Login .Login__ .Login-info .info__ form{
+    position: absolute;
+    width: 70%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    margin: 0 auto;
+  }
+
+  .Login .Login__ .Login-info .info__ .user-box #email-Validation {
+    font-size: 15px;
+  }
+  
+  .Login .Login__ .Login-info .info__ form .welcome__ .title img{
+    display: none;
+  }
+
+  .Login .Login__ .Login-info .info__ form .welcome__ .top{
+    display: none;
+  }
+
+  .Login .Login__ .Login-info .info__ form .bottom{
+    display: block;
+  }
+
+  .Login .Login__ .Login-info .info__ h4 {
+    font-size: 0.90em;
+}
+
+
+}
+/* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+@media only screen and (max-width:481px){
+  .Login .Login__{
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+  }
+
+  .Login .Login__ .Login-portrait{
+    position: relative;
+    background-image: url("/static/images/Login/Login-For-Kindells-test.jpg");
+    width: 100%;
+  }
+
+  .Login .Login__ .Login-portrait h2{
+    position: absolute;
+    bottom: 0;
+  }
+
+  .Login .Login__ .Login-portrait p{
+    display: none;
+  }
+
+  .Login .Login__ .Login-info{
+    width: 100%;
+  }
+
+  .Login .Login__ .Login-info .info__ form{
+    width: 75%;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+  
+
+  .Login .Login__ .Login-info .info__ form .welcome__ .title h3 span{
+    display: block;
+
+  }
+
+  .Login .Login__ .Login-info .info__ form .welcome__ .title img{
+    display: none;
+  }
+
+  .Login .Login__ .Login-info .info__ .user-box #email-Validation {
+    font-size: 15px;
+  }
+
+  .Login .Login__ .Login-info .info__ form .user-box{
+    padding: 0 0 10px 0;
+  }
+
+  .Login .Login__ .Login-info .info__ form .welcome__ .top{
+    display: none;
+  }
+
+  .Login .Login__ .Login-info .info__ form .bottom{
+    display: block;
+  }
+
+  .Login .Login__ .Login-info .info__ h4 {
+    font-size: 0.90em;
+}
+
+.Login .Login__ .Login-info .info__ button{
+  font-size: 22px;
+  height: 35px;
+}
+}
+
+@media only screen and (min-width:320px) and (max-width:481px) and (orientation: landscape){
+  .Login .Login__ .Login-portrait h2 {
+    font-size: 36px;
+}
+}
+
+
+
+/* Landscape */ 
+
+

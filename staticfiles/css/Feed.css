@@ -1,0 +1,960 @@
+@import url('https://fonts.googleapis.com/css2?family=K2D&display=swap');
+
+:root{
+  --white-img: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7484%) hue-rotate(94deg) brightness(101%) contrast(101%);
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+html, body {
+  scroll-behavior: smooth;
+  width:100%;
+  background-color: #000000;
+  height: 100%;
+} 
+
+body{
+  font-family: 'K2D', sans-serif;
+  background-color: black;
+  color: var(--color-primary);
+
+}
+
+
+h1,
+h3,button{
+  font-weight: bolder;
+  color: white;
+}
+
+
+button ,a{
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+p{
+  line-height: 1.9rem;
+  color: white;
+  -webkit-mask-image: linear-gradient(black 54%, transparent 100%);
+
+}
+
+img{
+  border-radius: 15px;
+}
+
+::-moz-selection { /* Code for Firefox */
+  color: #bd3acc;
+  font-weight: 900;
+}
+
+::selection {
+  color: #bd3acc;
+  font-weight: 900;
+}
+
+
+.Navbar .container{
+  width: 95%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Navbar .container .--user-tools,
+.Navbar .container .--user-parametre ul li:nth-child(2){
+  display: none;
+}
+
+
+.Navbar .container ul a {
+  color: white;
+}
+
+#Logo{
+  width: 150px;
+  filter: var(--white-img);
+}
+
+.--user-parametre ul li{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.--user-parametre ul li span{
+  color: white;
+}
+
+.--user-parametre ul li img{
+  width: 35px;
+  border-radius: 50%;
+}
+
+/* Hero */
+.__Hero{
+  padding-bottom: 30px;
+}
+
+.__Hero .--container{
+  background-image: url("/static/images/Feeds/be_someone.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 43.95em;
+  position: relative;
+  display: grid;
+  justify-items: center;
+}
+
+.__Hero .--container .--title{
+  width: clamp(14em ,90vw ,57em);
+  display: grid;
+  gap: 30px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: auto;
+  justify-items: start;
+}
+
+.__Hero .--container .--title{
+  margin-right: inset;
+  margin-left: inset;
+  margin-top: auto;
+  justify-items: center;
+}
+
+.__Hero .--container .--title h1{
+  width: clamp(9em , 90vw, 57em);
+  font-size: clamp(30px, 3.4vw, 53px);
+}
+
+.__Hero .--container .--title a{
+  background-color: white;
+  color: black;
+  padding: 8px 46px;
+  font-size: 22px;
+  display: none;
+}
+
+.__Hero .--container .--title h1,
+.__Hero .--container .--title p,
+.__Hero .--container .--title a
+{
+  text-align: center;
+}
+
+
+/* Categories : Design / Code / Language => Cards */
+
+.__Categories .container{
+  display: grid;
+  gap: 15px;
+}
+
+.__Categories .container .--categorie-title{
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.__Categories .container .--categorie-title .--title_categorie-container h1{
+    font-size: clamp(30px, 5.3vw, 45px);
+}
+
+.__Categories .container .--categorie-title p{
+  display: none;
+}
+
+.__Categories .container .--categories .card{
+  position:relative;
+  width: 90%;
+  margin: 0 auto;
+  height: 400px;
+}
+
+.__Categories .container .--categories .card .__card-{
+  width: 100%;
+  object-fit: cover;
+  min-height: 100%;
+}
+
+.--categories .card .S2le--categorie{
+  position: absolute;
+  display: flex;
+  bottom: 10px;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.--categories .card .S2le--categorie img{
+  width: 130px;
+  filter: var(--white-img);
+}
+
+
+.swiper-slide{
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+  filter: blur(2px);
+}
+
+.swiper-slide-active{
+  filter: blur(0px);
+}
+
+
+/* Vote */
+
+.__Vote .--container{
+  background-image: url("/static/images/Feeds/there_is_one_solution.png");
+  background-size: cover;
+  background-position: 30% 50%;
+  background-repeat: no-repeat;
+  min-height: 43.95em;
+  position: relative;
+  display: grid;
+  justify-items: center;
+}
+
+.__Vote .--container .--title{
+  width: 80%;
+  display: grid;
+  gap: 28px;
+  position: absolute;
+  bottom: 35px;
+}
+
+.__Vote .--container .--title h1{
+    font-size: clamp(37px,4.3vw,68px);
+}
+
+.__Vote .--container .--title p{
+  font-size: 18px;
+}
+
+.__Vote .--container .--title a{
+  background-color: white;
+  color: black;
+  padding: 8px 27px;
+  font-size: 19px;
+  justify-self: center;
+}
+
+/* Benefits */
+.__Benefits{
+  padding-bottom: 30px;
+}
+
+.__Benefits .container{
+  display: grid;
+  gap: 20px;
+}
+
+.__Benefits .container .--benefits-title{
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.__Benefits .container .--benefits-title h1{
+  font-size: clamp(36px, 4.3vw ,58px)
+}
+
+.__Benefits .container .--benefits-title p{
+  display: none;
+}
+
+.__Benefits .container .--benefits .card{
+  position:relative;
+  width: 95%;
+  margin: 0 auto;
+  height: 500px;
+}
+
+.__Benefits .container .--benefits .card .__card-{
+  max-width: 100%;
+  object-fit: cover;
+  min-height: 100%;
+}
+
+.--benefits .card .S2le--benefits{
+  position: absolute;
+  padding: 20px 0 30px;
+  display: flex;
+  height: 100%;
+  bottom: 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.--benefits .card .S2le--benefits h1{
+  font-size: 42px;
+}
+
+.--benefits .card .S2le--benefits p{
+  font-weight: 500;
+  font-size: 19px;
+  width: 95%;
+}
+
+/* Advantage */
+
+.__Advantages img{
+  border-radius: 0px;
+}
+
+.__Advantages .container{
+  width: 100%;
+  overflow-x: hidden
+}
+
+.__Advantages .container .__card{
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.__Advantages .container .__card img{
+  width: 100%;
+  position: relative;
+  height: 500px;
+  object-fit: cover;
+  filter: brightness(0.85);
+}
+
+.__Advantages .container .__card:nth-child(1) img{
+  transform: scaleX(-1);
+}
+
+.container .__card .--advantage_title{
+  display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+    justify-content: space-between;
+    padding: 20px 14px;
+}
+
+.container .__card .--advantage_title h1{
+  font-size: clamp(30px , 4vw , 65px)
+}
+
+.container .__card:nth-child(2) .--advantage_title h1
+{
+  text-align: end;
+}
+
+.container .__card:nth-child(1) .--advantage_title p,
+.container .__card:nth-child(3) .--advantage_title p
+{
+  text-align: end;
+}
+
+
+.container .__card .--advantage_title p{
+  font-size: clamp(19px, 1.85vw, 27px);
+  line-height: clamp(35px,3.3vw,48px);
+
+}
+
+.container .__card .--advantage_title p:nth-child(3){
+  display: none;
+}
+
+/* Call to action */
+
+.__callToAction{
+  padding-bottom: 40px
+}
+
+
+.__callToAction .--container{
+  background-image: url("/static/images/Feeds/Twins.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 47em;
+  position: relative;
+  display: grid;
+  justify-items: center;
+}
+
+.__callToAction .--container .__call-to-action--{
+  width: 65%;
+  display: grid;
+  gap: 20px;
+  justify-items: center;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+}
+
+.__callToAction .--container .__call-to-action-- h1{
+  font-size: 33px;
+}
+
+.__callToAction .--container .__call-to-action-- a{
+  background-color: white;
+  color: black;
+  padding: 8px 46px;
+  font-size: 22px;
+  justify-self: center;
+}
+
+/* Footer */
+footer .container{
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  gap: 20px;
+  padding-bottom: 10px;
+
+}
+
+.infoContact .wrapper{
+  display: grid;
+  gap: 1rem;
+}
+
+.infoContact .wrapper .footerLogo{
+  display: grid;
+  gap: 10px;
+  justify-items: center;
+}
+
+.footerLogo img{
+  filter:var(--white-img);
+  max-width:clamp(185px, 25vw, 237px);
+}
+  
+.platformInfo{
+  display: grid;
+  gap: 18px;
+  justify-items: center;
+}
+
+.footerCategorie,
+.footerPlatform,
+.footerResource,
+.footerCategorie ul,
+.footerPlatform ul,
+.footerResource ul{
+  display: grid;
+  gap: 10px;
+  justify-items: center;
+  max-width: 100%;
+}
+
+.Terms{
+  display: grid;
+  gap:15px;
+}
+
+.Terms ul{
+  display: flex;
+}
+
+
+.wrapper .platformInfo a{
+  color: white;
+
+}
+
+.wrapper .platformInfo a:hover{
+  color: rgb(150, 200, 204);
+  font-weight: 800
+}
+
+.wrapper .platformInfo .footerResource li{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+}
+
+.infoContact .wrapper .footerLogo img{
+  filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7484%) hue-rotate(94deg) brightness(101%) contrast(101%);
+}
+
+.Terms p{
+  text-align: center;
+}
+
+.Terms a{
+  display: none;
+}
+
+
+@media (min-width:1000px){
+  .__Benefits .container .--benefits .card{
+    max-width: 25%;
+  }
+
+  .__Benefits{
+    min-height: 100vh;
+    position: relative;
+  }
+
+  .__Benefits .facesection{
+    background-image: url('/static/images/Feeds/Where_we_gonna_go.png');
+    height: 670px;
+    background-size: cover;
+    background-position: 0 70%;
+    filter: blur(2px) brightness(66%);
+  }
+
+  .__Benefits .container .--benefits{
+    position: absolute;
+    top: 150px;
+  }
+
+  .__Benefits .container .--benefits .card {
+    width: 70%;
+    min-height: auto;
+  }
+
+  .__Benefits .container .--benefits-title
+  {
+    position: absolute;
+    z-index: 4;
+    width: 35%;
+    top: 5%;
+    display: flex;
+    text-align: start;
+    margin-left: 80px;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+  .__Benefits .container .--benefits-title p{
+    display: block;
+  }
+
+  .--benefits .wrapper .swiper-slide{
+    filter: blur(2px);
+    filter: brightness(0.1);
+    filter: grayscale();
+    opacity: 1;
+  }
+  
+  .--benefits .wrapper .swiper-slide-active{
+    filter: blur(0px);
+    filter: grayscale(0);
+
+
+  }
+
+  .__card .--advantage_title p:nth-child(2){
+    display: none;
+  }
+
+  .container .__card .--advantage_title p:nth-child(3){
+    display: block;
+  }
+  
+
+  .__card .--advantage_title p{
+    font-size: 27px;
+    padding: 0 0 20px 0;
+  }
+
+
+  .__Advantages .container .__card{
+    height: 600px;
+  }
+
+  .__Advantages .container .__card img {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+@media (min-width:867px){
+
+  /* Navbar */ 
+  .Navbar .container {
+    width: 90%;
+  }
+
+  .Navbar .container .__tools-{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+  
+
+  .Navbar .container .--user-tools,
+  .Navbar .container .--user-parametre ul li:nth-child(2){
+    display: inline-grid;
+  }
+
+
+
+  #Logo{
+    width: 150px;
+  }
+
+  .container .--user-tools ul {
+    display: grid;
+    grid-template-columns: repeat(3 , auto);
+    column-gap: 59px;
+    align-items: center;
+    font-size: 22px;
+    justify-items: center;
+
+  }
+
+  .container .--user-parametre ul{
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    justify-content: end;
+    align-items: center;
+    font-size: 22px;
+    gap: 65px;
+  }
+}
+
+
+@media (min-width:800px){
+
+  ::-webkit-scrollbar{
+    width: 12px;
+  }
+  
+  ::-webkit-scrollbar-thumb{
+    background: linear-gradient(transparent, #000000, #ff9900);
+    border-radius: 6px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover{
+    background: linear-gradient(transparent, #000000, #ff0000);
+  }
+
+  
+  .__Hero .--container {
+    background-image: url("/static/images/Feeds/be_someone_II.jpg");
+    background-position: right;
+  } 
+
+  .__Hero .--container .--title{
+    margin-left: 80px;
+    margin-bottom: auto;
+    justify-items: start;
+
+  }
+
+  .__Hero .--container .--title h1,
+  .__Hero .--container .--title p,
+  .__Hero .--container .--title  a
+  {
+    text-align: start;
+  }
+
+  .__Hero .--container .--title  p{
+    width: 50%;
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  .__Hero .--container .--title a{
+    display: block;
+  }
+
+  .__Categories .container{
+    position: relative;
+    display: block;
+  }
+
+  .__Categories .container .--categories .swiper-wrapper .card {
+   max-width: 300px;
+   min-height: 400px;
+  }
+
+  .__Categories .container .--categories .swiper-wrapper{
+    display: flex;
+    flex-direction: row;
+  }
+
+
+  .__Categories .container .--categorie-title {
+    z-index: 3;
+  }
+
+  .__Categories .container .--categorie-title .--title_categorie-container{
+    width: 40%;
+    margin-left:80px;
+    display: grid;
+    gap: 30px;
+    position: absolute;
+    bottom: 63px;
+    z-index: 3;
+  }
+  
+  .__Categories .container .--categorie-title .--title_categorie-container h1
+  {
+    text-align: start;
+  }
+
+  .__Categories .container .--categorie-title .--title_categorie-container p
+  {
+    display: block;
+    text-align: start;
+    width: 50%;
+    font-size: 21px;
+    line-height: 38px;
+  }
+
+  .__Categories .container .--categories .wrapper{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+  }
+
+  .__Categories .container .--categories .swiper-wrapper .card {
+    max-width: 500px;
+    min-height: 543px;
+  }
+
+  .swiper-slide{
+    filter: blur(2.5px);
+    opacity: 0.4;
+  }
+  
+  .swiper-slide-active{
+    filter: blur(0px);
+    opacity: 1;
+  }
+
+  .__Vote .--container .--title {
+    width: 50%;
+    top: 50%;
+    right: 80px;
+    transform: translate(0%, -50%);
+    bottom: auto;
+    justify-items: end;
+  }
+
+
+  .__Vote .--container .--title h1,
+  .__Vote .--container .--title p
+  {
+    text-align: end;
+  }
+
+  .__Vote .--container .--title p{
+    width: 80%;
+  }
+
+  .__Vote .--container .--title  a{
+    justify-self: end;
+  }
+
+  footer .container{
+    display: grid;
+    gap: 40px;
+    margin: 0 0 0 50px;
+    padding-bottom: 15px;
+  
+  }
+  
+  footer .container .infoContact .wrapper{
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .infoContact .wrapper .footerLogo p{
+    font-weight: 900;
+  }
+  
+  .infoContact .wrapper .platformInfo{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  
+  .wrapper .platformInfo a{
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-weight: 500;
+    font-size: clamp(17px,1.5vw,18px);
+  
+  }
+  
+  .wrapper .platformInfo a:hover{
+    color: rgb(150, 200, 204);
+    font-weight: 800
+  }
+  
+  .footerCategorie,
+  .footerPlatform,
+  .footerResource{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .footerCategorie ul,
+  .footerPlatform ul,
+  .footerResource ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 18px;
+  }
+  
+  .footerCategorie ul li,
+  .footerPlatform ul li,
+  .footerResource ul li{
+    display: flex;
+    align-items: center;
+  }
+  
+  footer .container .Terms{
+    display: flex;
+    padding: 0 50px;
+    justify-content: space-evenly;
+  }
+  
+  
+  .container .Terms ul{
+    display: flex;
+      /* flex-direction: row; */
+    align-items: center;
+    gap: 70px;
+  
+  }
+  
+  .Terms ul li a{
+    color:white
+  }
+  
+  .Terms a {
+    display: block;
+  }
+  
+  .Terms p{
+    padding: 0 50px;
+  }
+
+  
+
+}
+
+@media (min-width:794px){
+  .container .__card .--advantage_title {
+    display: grid;
+    grid-template: 1fr / repeat(2, auto);
+  }
+
+  .container .__card:nth-child(2) .--advantage_title h1{
+    grid-column: 2;
+  }
+
+  .container .__card:nth-child(2) .--advantage_title p{
+    grid-column: 1;
+  }
+
+  .container .__card .--advantage_title p{
+    align-self: end;
+  }
+
+  .__callToAction .--container .__call-to-action-- h1{
+    font-size: 44px;
+  }
+
+  .__callToAction .--container .__call-to-action-- p{
+    font-size: 21px;
+    line-height: 40px;
+  
+  }
+}
+
+@media (min-width:780px){
+  .__Categories .container .--categories .card,
+  .__Benefits .container .--benefits .card {
+    width: 65%;
+  }
+
+  .--benefits .card .S2le--benefits p {
+    width: 80%;
+  }
+}
+
+@media (min-width:746px){
+  .__Advantages .container .__card img {
+    max-height: 100%;
+  }
+}
+
+@media (min-width:620px){
+  .__Categories .container .--categories .card, .__Benefits .container .--benefits .card {
+    width: 50%;
+  }
+}
+
+@media (min-width:620px){
+  .__Vote .--container .--title p {
+    font-size: 21px;
+    line-height: 35px;
+  }
+  .__Benefits .container {
+    gap: 57px;
+  }
+
+  .container .__card .--advantage_title {
+    padding: 20px 32px;
+  }
+}
+
+@media (min-width:550px){
+  footer .container .infoContact{
+    width: 100%;
+
+  }
+
+  .platformInfo {
+    display: grid;
+    gap: 0;
+    grid-template-columns: repeat(3,auto);
+  }
+}
+
+@media (min-width:420px){
+  .__Categories .container .--categories .card, .__Benefits .container .--benefits .card{
+    width: 80%;
+    min-height: 550px;
+  }
+
+}
+
+@media (min-width:400px){
+  .__Hero .--container .--title h1{
+    width: 100%;
+  }
+
+  .--benefits .card .S2le--benefits p {
+    font-size: 23px;
+    line-height: 2.5rem;
+  }
+
+  .__callToAction .--container .__call-to-action-- {
+    bottom: 10px;
+  }
+}
