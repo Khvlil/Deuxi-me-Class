@@ -1,0 +1,68 @@
+.Categories .categories__ #Photoshop{
+  height: 100vh;
+  background-image: url("/static/images/Design/Photoshop.jpg");
+  display: flex;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  justify-content: flex-end;
+  align-content: center;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  padding: 0 0 100px 0;
+}
+
+.Categories .categories__ #Illustrator{
+  background-image: url("/static/images/Design/Illustrator.jpg");
+  display: flex;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  justify-content: flex-end;
+  align-content: center;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  padding: 0 0 100px 0;
+}
+
+.Categories .categories__ #Premier-pro{
+  background-image: url("/static/images/Design/Premier-pro.jpg");
+  display: flex;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  justify-content: flex-end;
+  align-content: center;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  padding: 0 0 100px 0;
+}
+
+
+.Categories .categories__ #Tds-max{
+  background-image: url("/static/images/Design/3ds-Max.jpg");
+  display: flex;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  justify-content: flex-end;
+  align-content: center;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  padding: 0 0 100px 0;
+}
+
+.swiper-button-next, .swiper-rtl .swiper-button-prev,
+.swiper-button-prev, .swiper-rtl .swiper-button-next, .swiper-button-next.swiper-button-disabled, .swiper-button-prev.swiper-button-disabled{
+  color: rgb(72, 255, 0) !important;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: rgb(72, 255, 0) !important;
+}
+
+
+
+.Previous iconify-icon[icon='bi:arrow-left-circle-fill']:hover{
+  filter: brightness(0) saturate(100%) invert(66%) sepia(88%) saturate(381%) hue-rotate(47deg) brightness(105%) contrast(85%);
+}

@@ -1,0 +1,23 @@
+{% extends "Error/Errors.html" %}
+{% load static %}
+
+{% block title %}
+  Oh, Daddy No...!!
+{% endblock title %}
+
+
+{% block head %}
+  <link rel="stylesheet" href="{% static '/css/Accounts/Errors/Error500.css' %}"/>
+{% endblock head %}
+
+{% block error %}
+  <section class="Ooh">
+    <div class="title">
+      <h1>Ooh ...</h1>
+        <h4>this  service isn’t turn on, yet </h2>
+          <h4>Our big juicy black developer gonna take care of it</h4>
+          <h4>I’m gonna call you when shit get hot</h4>
+        <a href="{% url 'Service:Home' user.user_ID %}">“ Touch me right here , Duddy !! “</a>
+    </div>
+  </section>
+{% endblock error %}

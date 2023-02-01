@@ -1,0 +1,239 @@
+@import url('http://fonts.cdnfonts.com/css/k2d');
+
+*{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow: hidden;
+  scroll-behavior: smooth;
+  width:100%;
+}
+
+body{
+  font-family: 'K2D', sans-serif;
+}
+
+section{
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container{
+  width: 100%;
+  height: 100vh;
+}
+
+.content{
+  height: 100%;
+  background-image: url('/static/images/Expired/Subscritpion/Expired-Subscription.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.content__{
+  width: 60%;
+}
+
+.logo img{
+  filter: brightness(0) saturate(100%) invert(84%) sepia(9%) saturate(4316%) hue-rotate(342deg) brightness(101%) contrast(110%);
+}
+
+
+.alertJoyful{
+  display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    /* height: 55px; */
+    gap: 30px;
+    padding: 0 0 30px 0;
+    color: white;
+}
+
+.alertJoyful p:nth-child(1){
+  font-size: 48px;
+    font-weight: 900;
+}
+.alertJoyful p:nth-child(2){
+  font-size: 28px;
+    font-weight: 900;
+}
+.alertJoyful p:nth-child(3){
+  font-size: 25px;
+    font-weight: 900;
+}
+
+.callAction{
+  display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 20px;
+}
+
+.callAction button, a{
+  height: 100%;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+.callAction a.goBackHome{
+  background: #000000;
+  text-align: center;
+  color: #ffffff;
+  -webkit-transition: color 0.2s ease-out;
+  -moz-transition: color 0.2s ease-out;
+  -o-transition: color 0.2s ease-out;
+  transition: color 0.2s ease-out;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 8px 6px;
+}
+
+.callAction a.goBackHome:hover{
+  color: orange;
+}
+
+.callAction button.Renew{
+  background: #ffbf00;
+  color: white;
+
+  -webkit-transition: color 0.2s ease-out;
+  -moz-transition: color 0.2s ease-out;
+  -o-transition: color 0.2s ease-out;
+  transition: color 0.2s ease-out;
+  font-size: 20px;
+  font-weight: 900;
+  padding: 8px 16px;
+}
+
+.callAction button.Renew:hover{
+  color: orange;
+  background-color: #ffffff;
+}
+
+section .popup-outer{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  background: rgba(0,0,0,0.4);
+  opacity: 0;
+  pointer-events: none;
+  box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+  transform: scale(1.2);
+  transition: all 0.3s ease-in-out;
+}
+section.show .popup-outer{
+  opacity: 1;
+  pointer-events: auto;
+  transform: scale(1);
+}
+section .popup-box{
+  position: relative;
+  padding: 30px;
+  max-width: 380px;
+  width: 100%;
+  background: #000;
+  border-radius: 12px;
+}
+.popup-box .close{
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  font-size: 24px;
+  color: #b4b4b4;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.popup-box .close:hover{
+  color: #333;
+}
+section .popup-box .profile-text{
+display: flex;
+align-items: center;
+flex-direction: column;
+}
+section .popup-box img{
+height: 59px;
+width: 105px;
+object-fit: cover;
+border-radius: 50%;
+} 
+.profile-text .text{
+display: flex;
+  flex-direction: column;
+  margin-left: 15px;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+.profile-text .text .name{
+font-size: 28px;
+font-weight: 400;
+}
+.profile-text .text .profession{
+font-size: 11px;
+font-weight: 300;
+}
+
+.profile-text .text p{
+font-size: 18px;
+}
+section .popup-box textarea{
+  min-height: 140px;
+  width: 100%;
+  margin-top: 20px;
+  outline: none;
+  border: 1px solid #ddd;
+  padding: 12px;
+  border-radius: 6px;
+  resize: none;
+  font-size: 14px;
+  font-weight: 400;
+  background: #f3f3f3;
+}
+section .popup-box .button{
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 15px;
+}
+.popup-box .button button{
+  outline: none;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  background: #ffffff;
+  margin-left: 8px;
+  color: #000;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.button button.cancel{
+background: #ffd400;
+}
+.button button.cancel:hover{
+background: #ffbb00;
+}
+.button button.send:hover{
+  background: #9d9d9d;
+  color: rgb(255, 255, 255);
+}

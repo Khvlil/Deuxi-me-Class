@@ -1,0 +1,128 @@
+{% extends "account/Authentication.html" %}
+{% load socialaccount %}
+{% load static %}
+
+{% block title %}
+Login
+{% endblock title %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static '/css/accounts/Login.css' %}" />
+{% endblock head %}
+
+
+
+{% block main %}
+<main class="Login">
+  <div class="Login__">
+    <div class="Login-portrait">
+      <div class="title">
+        <h2>Empower Your Mind"</h2>
+        <p>Join the s2le community and discover a new world of learning opportunities.Join the s2le community and
+          discover a new world of learning opportunities.</p>
+      </div>
+    </div>
+
+    <div class="Login-info">
+      <div class="info__">
+
+        <form action="{% url 'Accounts:Login' %}" method="POST" id="form">
+          {% csrf_token %}
+
+          <div class="welcome__">
+            <div class="title">
+              <h3>Welcome back in <span>S2alle</span></h3>
+              <img class="logo" src="{% static '/images/Logo/Faveicon.png' %}">
+            </div>
+            <p>welcoeme back ,please enter your details</p>
+            <!-- Social Authentication Buttons -->
+            <div class="col s12 m6 offset-m3 center-align google-button google" style="padding:  10px 0 0 0;">
+              <a class="oauth-container btn darken-4" href="{% provider_login_url 'google' %}?next={{ request.path }}"
+                style="width:100%; text-transform:none">
+                <div class="left">
+                  <img width="28px" style=" margin-top:4.5px; margin-right:8px;" alt="Google sign-in"
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" />
+                </div>
+                Login with Google
+              </a>
+            </div>
+
+            <div class="col s12 m6 offset-m3 center-align google-button github" style="padding:  10px 0 0 0;">
+              <a class="oauth-container btn darken-4" href="{% provider_login_url 'github' %}?next={{ request.path }}"
+                style="width:100%; text-transform:none">
+                <div class="left">
+                  <img width="28px" style=" margin-top:4.5px; margin-right:8px;" alt="Google sign-in"
+                    src="/static/images/Logo/Buttons/Github/Github.png" />
+                </div>
+                Login with Github
+              </a>
+            </div>
+
+            <p id="or" style="padding: 0 0 30px 0;">
+              <span class="line">or</span>
+            </p>
+          </div>
+
+
+          <div class="user-box" id="Email-box">
+            <input type="text" id="Email" name="email" required />
+
+            <label for="email" id="email">Email Address</label>
+            {% for message in messages %}
+            <span id="email-Validation">{{ message }}</span>
+            {% endfor %}
+          </div>
+
+
+          <div class="user-box" id="Password-box">
+            <input type="password" name="password" id="Password" required>
+
+            <label for="password" id="password">Password</label>
+
+            <span id="password-Validation"></span>
+          </div>
+
+          <div class="login-parametre">
+            <div class="checking-terms">
+              <label style="font-size: 12px;">
+                <input type="checkbox" name="remember" value="{{ request.GET.next }}" /> Remember me for 30 days
+              </label>
+            </div>
+
+            <div><a href="#" style="font-size: 12px;">Forgot password</a></div>
+
+          </div>
+
+          <div class="button" style="width: 100%; padding-top:10px;">
+            {% if request.GET.next %}
+            <button type="submit" name="next" value="{{ request.GET.next }}">Log in</button>
+            {% elif request.GET.voting %}
+            <button type="submit" name="voting" value="{{ request.GET.voting }}">Log in</button>
+            {% elif request.GET.lecture %}
+            <button type="submit" name="lecture" value="{{ request.GET.lecture }}">Log in</button>
+            {% else %}
+            <button type="submit">Log in</button>
+            {% endif %}
+          </div>
+
+
+          <div class="sign-in">
+            <h4>Don’t have an account ? <a href="{% url 'Accounts:Register' %}">Sign up Now</a></h4>
+          </div>
+
+
+
+        </form>
+
+
+      </div>
+    </div>
+  </div>
+</main>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.6.1.js"></script>
+<!---->
+
+{% endblock main %}

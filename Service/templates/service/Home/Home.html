@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static '/css/Feed.css' %}">
+  <link rel="" href="">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="icon" type="image/x-icon" href="{% static '/images/Logo/Faveicon.png' %}">
+
+  <title>Home</title>
+</head>
+
+<body>
+  <header>
+    <nav class="Navbar">
+      <div class="container">
+        <div class="__tools-">
+          <div class="Logo">
+            <a href="#">
+              <img src="{% static '\images\Logo\Faveicon.png' %}" alt="S2le Logo" id="Logo">
+            </a>
+          </div>
+          <div class="--user-tools">
+            <ul>
+              <li><a href="#Categories__">
+                  Design
+                </a></li>
+              <li><a href="#Categories__">
+                  Langue
+                </a></li>
+              <li><a href="#Categories__">
+                  Code
+                </a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="--user-parametre">
+          <ul>
+            {% if user.is_authenticated and Avatar is not none %}
+            <li><img src="{{ Avatar }}" alt="profile"><span>{{ username }}</span></li>
+            <li><a href="{% url 'Accounts:Logout' %}">
+                Logout
+              </a></li>
+
+            {% elif user.is_authenticated and Avatar is none %}
+            <li><img src="{% static '/images/Logo/Luffy.jpg' %}" alt="profile"><a
+                href="{% url 'Accounts:Logout' %}"><span>{{ username }}</span></a></li>
+            <li><a href="{% url 'Accounts:Logout' %}">
+                Logout
+              </a></li>
+
+            {% endif %}
+          </ul>
+        </div>
+      </div>
+
+    </nav>
+  </header>
+
+  <main>
+    <section class="__Hero">
+      <div class="--container">
+        <div class="--title">
+          <h1 data-aos="fade-in">Your One-Stop-Shop for Skill-Building and Knowledge-Expansion</h1>
+          <p data-aos="fade-in">Looking to become a coding and design superhero? Look no further than S2LE! We've got
+            all the courses and
+            resources you need to , you'll be well on your way to world domination...err, we mean success. Join us and
+            let's make it happen!</p>
+          <a href="#Categories__" data-aos="fade-in">Start Now</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="__Categories" id="Categories__">
+      <div class="container">
+        <div class="--categorie-title">
+          <div class="--title_categorie-container">
+            <h1 data-aos="fade-up">Ready to dive in? Pick a course and let's get to work!</h1>
+            <p data-aos="fade-up">Feeling indecisive? No worries – just pick something and go with it! (You can always
+              switch later).</p>
+          </div>
+        </div>
+        <!-- Swiper -->
+        <div class="swiper --categories">
+          <div class="swiper-wrapper wrapper">
+            <a href="{% url 'Service:Design'%}" class="card swiper-slide" id="Design">
+              <img class="__card-" src="{% static '/images/Feeds/Ruthless.png' %}" alt="Design">
+              <div class="S2le--categorie">
+                <img src="{% static '\images\Logo\Faveicon.png' %}" alt="S2le Logo">
+                <h1>Design</h1>
+              </div>
+            </a>
+
+            <a href="{% url 'Service:Language'%}" class="card swiper-slide" id="Langue">
+              <img class="__card-" src="{% static '/images/Feeds/DOLCI&GABBANA.webp' %}" alt="Langue">
+              <div class="S2le--categorie">
+                <img src="{% static '\images\Logo\Faveicon.png' %}" alt="S2le Logo">
+                <h1>Langue</h1>
+              </div>
+            </a>
+
+            <a href="{% url 'Service:Coding' %}" class="card swiper-slide" id="Code">
+              <img class="__card-" src="{% static '/images/Feeds/worst_case_scenario.png' %}" alt="Code">
+              <div class="S2le--categorie">
+                <img src="{% static '\images\Logo\Faveicon.png' %}" alt="S2le Logo">
+                <h1>Code</h1>
+              </div>
+            </a>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="__Vote" data-aos="fade-up">
+      <div class="--container">
+        <div class="--title">
+          <h1 data-aos="fade-up">Feeling opinionated? Let your vote do the talking!</h1>
+          <p data-aos="fade-up">Time to let your vote show your opinion and make your voice heard. Cast your vote now
+            and make a
+            difference!</p>
+          <a href="{% url 'Accounts:Vote'%}" data-aos="fade-up">Make your voice heard</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="__Benefits">
+      <h1></h1>
+      </div>
+      <div class="facesection">
+      </div>
+      <div class="container">
+        <div class="--benefits-title">
+          <h1 data-aos="fade-in">Ready to dive in? Pick a course and let's get to work!</h1>
+          <p data-aos="fade-in">Feeling indecisive? No worries – just pick something and go with it! (You can always
+            switch later).</p>
+        </div>
+        <!-- Swiper -->
+        <div class="swiper --benefits">
+          <div class="swiper-wrapper wrapper">
+            <div class="card swiper-slide">
+              <img class="__card-" src="{% static '/images/Feeds/everything_is_meaninless.webp' %}" alt="Design">
+              <div class="S2le--benefits">
+                <h1 data-aos="fade-up">Design</h1>
+                <p data-aos="fade-up">Become a successful designer with S2LE's design courses. Learn the latest
+                  techniques and best
+                  practices to turn your passions into reality. Join our community today!</p>
+              </div>
+            </div>
+
+            <div class="card swiper-slide">
+              <img class="__card-" src="{% static '/images/Feeds/aha.png' %}" alt="Langue">
+              <div class="S2le--benefits">
+                <h1 data-aos="fade-up">Language</h1>
+                <p data-aos="fade-up">Improve communication skills and open up new opportunities with S2LE's language
+                  courses. From travel
+                  to work, we have the resources to help you succeed.</p>
+              </div>
+            </div>
+
+            <div class="card swiper-slide">
+              <img class="__card-" src="{% static '/images/Feeds/Hahaha.png' %}" alt="Design">
+              <div class="S2le--benefits">
+                <h1 data-aos="fade-up">Code</h1>
+                <p data-aos="fade-up">Become a proficient programmer with S2LE's coding courses. From web development to
+                  data analysis,
+                  choose the topic that fits your interests and career goals</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="__Advantages">
+      <div class="container">
+        <div class="__card">
+          <img src="{% static '/images/Feeds/is_this_who_i_am.png' %}" alt="Artist">
+          <div class="--advantage_title">
+            <h1 data-aos="fade-right">Master the Art of Design with S2LE's Expert Instruction</h1>
+            <p>S2LE offers expert design instruction for all levels. Improve your skills and
+              techniques with us.</p>
+            <p data-aos="fade-up" class="responsive">
+              S2LE offers expert instruction in the art of design, helping you master the skills and techniques needed
+              to succeed in the field. Whether you're a beginner or an experienced designer, S2LE has something for
+              everyone.
+            </p>
+          </div>
+        </div>
+
+        <div class="__card">
+          <img src="{% static '/images/Feeds/its_should_be_somthing_there.png' %}" alt="Cyber">
+          <div class="--advantage_title">
+            <h1 data-aos="fade-left">Join the Coding Revolution with S2LE's Cutting-Edge Courses</h1>
+            <p>Become an expert coder with S2LE's cutting-edge courses. Find the right course for
+              your needs and goals.
+              Join the coding revolution today.</p>
+            <p data-aos="fade-right" class="responsive">
+              Take your coding skills to the next level with S2LE's cutting-edge courses. With a variety of options to
+              choose from, you'll be able to find a course that fits your needs and goals. Join the coding revolution
+              and become an expert in no time.
+            </p>
+          </div>
+        </div>
+
+        <div class="__card">
+          <img src="{% static '/images/Feeds/everthing_is_permenant.png' %}" alt="Reader">
+          <div class="--advantage_title">
+            <h1 data-aos="fade-right">Master the Art of Communication with S2LE's Language Courses</h1>
+            <p>Improve communication skills and open new doors. Gain confidence to communicate
+              effectively with S2LE.
+            </p>
+            <p data-aos="fade-left" class="responsive">
+              Improve your communication skills and open up new opportunities with S2LE's language courses. With a
+              variety of languages to choose from, you can learn at your own pace and gain the confidence to communicate
+              effectively in any situation. Whether you're a beginner or looking to brush up on your language skills,
+              S2LE has something for everyone.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="__callToAction">
+      <div class="--container" data-aos="fade-up">
+        <div class="__call-to-action--">
+          <h1 data-aos="fade-up">Don't wait any longer, start your journey with S2LE</h1>
+          <p data-aos="fade-up">Don't let any more time pass you by without taking the first step towards achieving your
+            goals. So why
+            wait? Start your journey with S2LE today and take control of your future</p>
+          <a href="#" data-aos="fade-in">Start the journey</a>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div class="infoContact">
+          <div class="wrapper">
+
+            <div class="footerLogo">
+              <img data-aos="flip-down" src="{% static '\images\Logo\Faveiconfooter.png' %}" alt="">
+              <p data-aos="zoom-in">Achieve greatness with S2LE</p>
+            </div>
+            <div class="platformInfo">
+
+              <div class="footerCategorie">
+                <h1>Categories</h1>
+                <ul>
+                  <li><a href="{% url 'Service:Design' %}">Design</a></li>
+                  <li><a href="{% url 'Service:Language' %}">Language</a></li>
+                  <li><a href="{% url 'Service:Coding' %}">Code</a></li>
+                </ul>
+              </div>
+              <div class="footerPlatform">
+                <h1>Platform</h1>
+                <ul>
+                  <li><a href="#">FAQ</a></li>
+                  <li><a href="#">About</a></li>
+                  <li><a href="#">Blog</a></li>
+                  <li><a href="#">Subscription</a></li>
+                </ul>
+              </div>
+              <div class="footerResource">
+                <h1>Resource</h1>
+                <ul>
+                  <li><iconify-icon icon="ic:baseline-facebook" width="25" style="color: white;"></iconify-icon><a
+                      href="#">
+                      Facebook</a>
+
+                  </li>
+                  <li><iconify-icon icon="mdi:instagram" width="25" style="color: white;"></iconify-icon><a href="#">
+                      Instagram</a>
+
+                  </li>
+                  <li><iconify-icon icon="mdi:twitter" width="25" style="color: white;"></iconify-icon><a href="#">
+                      Twitter</a>
+
+                  </li>
+                  <li><iconify-icon icon="mdi:github" width="25" style="color: white;"></iconify-icon><a href="#">
+                      Github</a>
+
+                  </li>
+                  <li><a href="#">Contact Us</a></li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+        <!-- Terms Links -->
+        <div class="Terms">
+          <ul>
+            <li><a href="#">©2023 S2le, Inc.</a></li>
+            <li><a href="#">Privacy and policy</a></li>
+            <li><a href="#">Terms of use</a></li>
+          </ul>
+
+          <p>© Copyright S2le Ltd 2023, All Rights Reserved</p>
+        </div>
+      </div>
+    </footer>
+
+  </main>
+  <!-- Swiper -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <script>
+    var swiperCategories = new Swiper(".--categories", {
+      effect: "coverflow",
+      loop: true,
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: "auto",
+      coverflowEffect: {
+        rotate: 0,
+        stretch: 0,
+        depth: 100,
+        modifier: 3,
+        slideShadows: true,
+      },
+
+      pagination: {
+        el: ".swiper-pagination",
+      },
+    });
+
+
+    //
+    var swiperBenefits = new Swiper(".--benefits", {
+      effect: "coverflow",
+      loop: true,
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: "auto",
+      coverflowEffect: {
+        rotate: 0,
+        stretch: 0,
+        depth: 50,
+        modifier: 3,
+        slideShadows: true,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+      },
+    });
+
+  </script>
+
+  <!-- Aos animation -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+  <!-- Iconofy -->
+  <script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,1 @@
+web gunicorn S2le.wsgi:apllication --log-file -

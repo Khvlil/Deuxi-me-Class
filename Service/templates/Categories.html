@@ -1,0 +1,64 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}{% endblock title %}</title>
+  <!-- Faveicon -->
+  <link rel="icon" type="image/x-icon" href="{% static '/images/Logo/Faveicon.png' %}">
+  <link rel="stylesheet" type="text/css" href="{% static '/css/Categories/Categories.css' %}" />
+  <!-- Animation aos link -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+  <!-- Swiper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+
+    <!-- Figma icons -->
+  <script src="https://code.iconify.design/iconify-icon/1.0.1/iconify-icon.min.js"></script>
+  {% block head %}
+    
+  {% endblock head %}
+</head>
+<body>
+  <!-- Previes page button -->
+  <a class="Previous" href="{% url 'Service:Home' user.uids %}#Categories">
+    <iconify-icon icon="bi:arrow-left-circle-fill" width='70' height='50'></iconify-icon>
+  </a>
+
+  <!-- Categories -->
+  <section class="Categories swiper" id="Categories">
+    <div class="categories__ swiper-wrapper">
+      {% block categories %}
+        
+      {% endblock categories %}
+    </div>
+  <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-pagination"></div>
+  </section>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+   <!-- AOS animation -->
+   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+   <script>
+     AOS.init();
+   </script>
+
+</body>
+<!-- Grid lines -->
+{% block grid %}
+    
+{% endblock grid %}
+
+{% block swip %}
+  
+{% endblock swip %}
+
+
+</html>

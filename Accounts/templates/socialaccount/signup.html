@@ -1,0 +1,40 @@
+{% extends "socialaccount/base.html" %}
+
+{% load i18n %}
+{% load static %}
+
+{% block extra_head %}
+  <link rel="stylesheet" href="{% static 'css/Accounts/SocialAccounts/SocialaccountsSignup.css' %}">
+{% endblock extra_head %}
+
+{% block head_title %}{% trans "Signup" %}{% endblock %}
+
+{% block content %}
+  <div class="container">
+    <div class="content">
+      <div class="title">
+        <h1>{% trans "Sign Up" %}</h1>
+        <img src="{% static '/images/Logo/S2_logo.png' %}" alt="">
+      </div>
+  
+      <div class="Formclass">
+        <div class="alertInfo">
+          <p>{% blocktrans with provider_name=account.get_provider.name site_name=site.name %}You are about to use your {{provider_name}} account to login to
+            {{site_name}}. As a final step, please complete the following form:{% endblocktrans %}</p>
+        </div>
+    
+        <div class="signForm">
+          <form class="signup" id="signup_form" method="post" action="{% url 'socialaccount_signup' %}">
+            {% csrf_token %}
+            {{ form.as_p }}
+            {% if redirect_field_value %}
+            <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+            {% endif %}
+            <button type="submit">{% trans "Sign Up" %} &raquo;</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,103 @@
+{% extends "Categories.html" %}
+{% load static %}
+
+{% block title %}
+    Design  
+{% endblock title %}
+
+{% block head %}
+    <link rel="stylesheet" type="text/css" href="{% static '/css/Categories/Design.css' %}" />  
+{% endblock head %}
+
+{% block categories %}
+
+    
+    {% if user.is_authenticated %}
+    <a data-aos="flip-left" data-aos-delay="50" href="{% url 'Lessons:photoshop' user.uids %}#Cards" class="Cards swiper-slide" id="Photoshop">
+      <div class="text">
+        <h1>Go from inspiration<br>to creation faster</h1>
+        <h4>Build your brand, make a meme, or explore   your inner artist.</h4>
+      </div>
+    </a>
+    {% else %}
+    <a data-aos="flip-left" data-aos-delay="50" href="{% url 'Lessons:photoshop' %}#Cards" class="Cards swiper-slide" id="Photoshop">
+    {% endif %}
+    
+    {% if user.is_authenticated %}
+    <a data-aos="flip-right" data-aos-delay="100" href="{% url 'Lessons:illustrator' user.uids %}#Cards" class="Cards swiper-slide" id="Illustrator">
+      <div class="text">
+        <h1>Master your language with lessons</h1>
+        <h4>Learning to Code Shouldn't Be Painful. Start  Your Coding Journey.</h4>
+      </div>
+    </a>
+    {% else %}
+    <a data-aos="flip-right" data-aos-delay="100" href="{% url 'Lessons:illustrator' %}#Cards" class="Cards swiper-slide" id="Illustrator">
+    </a>
+    {% endif %}
+    
+    {% if user.is_authenticated %}
+    <a data-aos="flip-left" data-aos-delay="150" href="{% url 'Lessons:premier-pro' user.uids %}#Cards" class="Cards swiper-slide" id="Premier-pro">
+      <div class="text">
+        <h1>Learn how to speak, in the job market</h1>
+        <h4>Speak in the language of bagettes and also  in the Harry Potter’s language.</h4>
+      </div>
+    </a>
+    {% else %}
+    <a data-aos="flip-left" data-aos-delay="150" href="{% url 'Lessons:premier-pro' %}#Cards" class="Cards swiper-slide" id="Premier-pro">
+    </a>
+    {% endif %}
+    
+    {% if user.is_authenticated %}
+    <a data-aos="flip-right" data-aos-delay="200" href="{% url 'Lessons:3ds-max' user.uids %}#Cards" class="Cards swiper-slide" id="Tds-max">
+      <div class="text">
+        <h1>Learn how to speak, in the job market</h1>
+        <h4>Speak in the language of bagettes and also  in the Harry Potter’s language.</h4>
+      </div>
+    </a>
+    {% else %}
+    <a data-aos="flip-right" data-aos-delay="200" href="{% url 'Lessons:3ds-max' %}#Cards" class="Cards swiper-slide" id="Tds-max">
+    </a>
+    {% endif %}
+
+{% endblock categories %}
+
+{% block grid %}
+
+<style>
+  .Categories .categories__{
+    display: grid;
+    grid-template-columns: repeat(4, auto);  
+  }
+</style>
+
+{% endblock grid %}
+
+
+{% block swip %}
+<script>
+  var swiper = new Swiper(".Categories", {
+    breakpoints: {
+      421:{
+        slidesPerView: 1,
+      },
+      520: {
+        slidesPerView: 2,
+      },
+      768: {
+        slidesPerView: 2,
+      },
+      1024: {
+        slidesPerView: 3,
+      },
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+</script>
+{% endblock swip %}

@@ -1,0 +1,433 @@
+@import url('https://fonts.googleapis.com/css2?family=K2D:wght@100&display=swap');
+
+body{
+  background-color: #000;
+}
+
+section{
+  height: 100vh;
+}
+
+a{
+  color: white;
+}
+
+a:hover{
+  color: #000;
+}
+
+
+/* Backgroud */
+
+.Lessons-page #Front-page{
+  background-image: url('/static/images/Lessons/Code/Background/Code-Lessons.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.Lessons-page #Front-page .title{
+  display: flex;
+  flex-direction: column;
+  gap: 60px ;
+  width: 60%;
+  position: absolute;
+  right: -8%;
+  padding: 0 50px 0 0;
+  top: 25%;
+  line-height: 40px;
+  margin: auto;
+}
+
+
+.Lessons-page #Front-page .title h1{
+  font-size: 70px;
+  font-weight: 900;
+}
+
+.Lessons-page #Front-page .title h3{
+  font-size: 37px;
+  font-weight: 700;
+
+
+}
+
+.Lessons-page #Front-page .title p{
+  font-size: 30px;
+  opacity: 95%;
+  line-height: 50px;
+  padding-right: 350px;
+}
+
+
+/* Cards row settings */
+
+.swiper{
+  width: 100%;
+}
+
+.Lessons-page .Cards .Cards-slider{
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 50px;
+
+}
+
+
+/* cards settings */
+
+.Lessons-page .Cards .Cards-slider .cards{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+
+}
+
+.Lessons-page .Cards .Cards-slider .cards img{
+  object-fit:cover;
+  height: 250px;
+  display: block;
+
+}
+
+
+
+.Lessons-page .cards .description{
+    background-color: rgb(87, 87, 87);
+    height: 370px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 12px;
+    padding: 0 40px 40px 40px;
+    line-height: 32px;
+}
+
+/* cards description settings */
+
+.Lessons-page .cards .description h1{
+  font-size: 35px;
+  font-weight: 900;
+  padding-bottom: 30px;
+  line-height: 40px;
+}
+
+.Lessons-page .cards .description p{
+  font-size: 25px;
+  font-weight: 500;
+}
+
+
+/* Cards shadow */
+
+.Lessons-page .Cards .cards
+{
+  box-shadow: rgba(0, 0, 0, 0.12) 8.4px 8.4px 13.2px 0.9px;
+}
+
+
+/* Portrait */
+@media screen and (min-width:280px) and (max-width:911px) {
+  .Lessons-page #Front-page .title {
+    gap: 31px;
+    width: 100%;
+    right: 0%;
+    padding: 0 50px 0 24px;
+    bottom:5%;
+    top: unset;
+    line-height: 40px;
+  }
+
+  .Lessons-page #Front-page .title h1 {
+    font-size: 70px;
+}
+
+.Lessons-page #Front-page .title h3 {
+  font-size: 27px;
+}
+
+.Lessons-page #Front-page .title p {
+  font-size: 15px;
+  opacity: unset;
+  line-height: 33px;
+  padding-right: unset;
+}
+
+.Lessons-page .cards .description {
+  gap: 12px;
+  padding: 0 15px 0px 20px;
+  line-height: 23px;
+}
+
+.Lessons-page .cards .description h1 {
+  font-size: 25px;
+  line-height: 40px;
+}
+
+.Lessons-page .cards .description p {
+  font-size: 14px;
+}
+}
+
+@media screen and (min-width:308px) and (max-width:911px){
+
+  .Lessons-page .cards .description {
+    gap: 0px;
+    padding: 0 10px 0px 10px;
+    line-height: 23px;
+}
+
+  .Lessons-page .cards .description p {
+    font-size: 19px;
+  }
+
+  .Lessons-page .cards .description h1 {
+    font-size: 40px;
+  }
+}
+
+@media screen and (min-width:529px) and (max-width:911px){
+
+  .Lessons-page .cards .description {
+    padding: 0 10px 0px 10px;
+    line-height: 23px;
+}
+
+}
+
+@media screen and (min-width:603px) and (max-width:911px){
+
+  .Lessons-page .cards .description {
+    padding: 0 10px 0px 24px;
+    line-height: 36px;
+}
+
+}
+
+@media screen and (min-width:667px) and (max-width:911px){
+  .Lessons-page #Front-page .title {
+    width: 100%;
+}
+}
+
+@media screen and (min-width:724px) and (max-width:911px){
+  .Lessons-page #Front-page .title {
+    width: 50%;
+    padding: 0 0 0 24px;
+    bottom: 25%;
+  }
+
+  .Lessons-page .cards .description h1 {
+    font-size: 50px;
+}
+
+  .Lessons-page .cards .description p {
+    font-size: 22px;
+}
+}
+
+@media screen and (orientation: landscape) and (min-width: 724px) and (max-width: 911px) and (max-height:473px){
+  .Lessons-page #Front-page .title {
+    bottom: 10%;
+  }
+}
+
+@media screen and (min-width:895px) and (max-width:911px){
+  .Lessons-page #Front-page .title {
+    width: 53%;
+    padding: 0 0 0 24px;
+    bottom: 25%;
+    left: 38%;
+  }
+
+  .Lessons-page .cards .description {
+    padding: 0 57px 0px 24px;
+    line-height: 44px;
+}
+
+.Lessons-page .cards .description h1 {
+  font-size: 50px;
+}
+
+.Lessons-page .cards .description p {
+  font-size: 24px;
+}
+}
+
+@media screen and (orientation: landscape) and (min-width: 859px) and (max-width: 911px) and (max-height:473px){
+  .Lessons-page #Front-page .title {
+    bottom: 10%;
+  }
+}
+
+@media screen and (min-width:911px) and (max-width:1023px){
+  .Lessons-page #Front-page .title {
+    gap: 31px;
+    width: 46%;
+    padding: 0 50px 0 20px;
+    bottom: 10%;
+    top: unset;
+    line-height: 40px;
+  }
+
+  .Lessons-page #Front-page .title p {
+    font-size: 20px;
+    opacity: 95%;
+    line-height: 43px;
+    padding-right:unset;
+  }
+
+  .Lessons-page .cards .description {
+    gap: 9px;
+    width: 88%;
+    margin: 0 auto;
+    /* padding: 0 10px 0px 10px; */
+    line-height: 40px;
+}
+}
+
+@media screen and (orientation: landscape) and (min-width: 911px) and (max-width: 911px) and (max-height:473px){
+  .Lessons-page #Front-page .title {
+    width: 66%;
+  }
+}
+
+@media screen and (min-width:1023px) and (max-width:1158px){
+
+  .Lessons-page #Front-page .title{
+    left: 43%;
+  }
+
+  .Lessons-page #Front-page .title p {
+    font-size: 30px;
+    opacity :unset;
+    line-height: unset;
+    padding-right:  unset;
+  }
+
+  .Lessons-page .cards .description{
+    padding: 0px 15px 20px 18px;
+  }
+
+  .Lessons-page .cards .description h1 {
+    font-size: 26px;
+  }
+
+}
+
+@media screen and (orientation: landscape) and (min-width:1023px) and (max-width:1158px){
+  .Lessons-page #Front-page .title {
+    width: 60%;
+    line-height: unset;
+    bottom: 5%;
+    gap: 10px;
+  }
+
+  .Lessons-page #Front-page .title h1 {
+    font-size: 61px;
+  }
+
+}
+
+@media screen and (min-width:1157px) and (max-width:1254px){
+  .Lessons-page .cards .description {
+    padding: 0 10px 40px 10px;
+  }
+
+  .Lessons-page #Front-page .title p{
+    padding-right: unset;
+  }
+}
+
+/* Landscape */
+@media screen and (orientation: landscape) and (min-width:280px) and (max-width:1023px) and (max-height:415px){
+  .Lessons-page #Front-page .title {
+    gap: 0;
+    width: 100%;
+    padding: 0 50px 0 24px;
+    top: unset;
+    line-height: unset; 
+  }
+
+  .Lessons-page #Front-page .title h3 {
+    font-size: 20px;
+}
+
+  .Lessons-page #Front-page .title h1 {
+    font-size: 24px;
+    padding-bottom: 13px;
+}
+
+}
+
+@media screen and (orientation: landscape) and (min-width:568px) and (max-width:1023px) and (max-height:415px){
+  .Lessons-page #Front-page .title h1 {
+    font-size: 42px;
+  }
+
+  .Lessons-page #Front-page .title h1 {
+    font-size: 32px;
+  }
+
+  .Lessons-page #Front-page .title {
+    width: 69%;
+    padding: 0 50px 0 24px;
+    }
+}
+
+@media screen and (orientation: landscape) and (min-width:607px) and (max-width:1023px) and (max-height:415px){
+  .Lessons-page #Front-page .title{
+    bottom: 15%;
+  }
+}
+
+@media screen and (orientation: landscape) and (min-width:723px) and (max-width:1023px) and (max-height:415px){
+  .Lessons-page #Front-page .title{
+    bottom: 15%;
+    left: 34%;
+    top: unset;
+  }
+}
+
+@media screen and (orientation: landscape) and (min-width:910px) and (max-width:1023px) and (max-height:548px){
+  .Lessons-page #Front-page .title{
+    bottom: 10%;
+    left: 34%;
+    top:unset;
+  }
+
+  .Lessons-page #Front-page .title h1 {
+    font-size: 35px;
+  }
+
+  .Lessons-page #Front-page .title h3 {
+    font-size: 27px;
+  }
+}
+
+@media screen and (orientation: landscape) and (min-width:1023px) and (max-width:1158px) and (max-height:515px){
+  .Lessons-page #Front-page .title {
+    left: 34%;
+  }
+
+  .Lessons-page #Front-page .title h1 {
+    font-size: 49px;
+  }
+
+  .Lessons-page #Front-page .title h3 {
+    font-size: 32px;
+  }
+
+  .Lessons-page #Front-page .title p {
+    font-size: 24px;
+  }
+
+}
+
+@media screen and (orientation: landscape) and (min-width:1157px) and (max-width:1253px){
+}
+
+

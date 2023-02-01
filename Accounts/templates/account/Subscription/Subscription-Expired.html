@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oops ,The fuel has run out</title>
+  <link rel="icon" type="image/x-icon" href="{% static '/images/Logo/Faveicon.png' %}">
+
+  <link rel="stylesheet" href="{% static '/css/Accounts/Errors/SubscriptionExpired.css' %}">
+
+  <!-- Fontawesome CDN Link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+  <!-- Boxicons CSS -->
+  <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+  <section>
+    <div class="container">
+      <div class="content">
+        <div class="logo">
+          <img src="{% static 'images/Logo/Faveicon.png' %}" alt="S2le Hub">
+        </div>
+        <div class="alertJoyful">
+          <p>Subscribe to Our Newsletter</p>
+          <p>Subscribe now and get full access to ourexclusive content</p>
+          <p>Renew your account Now!</p>
+        </div>
+        <div id="renewBtn" class="callAction">
+          <button class="Renew">Renew your account</button>
+          <a href='{% url "Accounts:Logout" %}' class="goBackHome">Go back home</a>
+        </div>
+      </div>
+    </div>
+    <div class="popup-outer">
+      <div class="popup-box">
+        <form method="POST" accept="{% url 'Accounts:subscription-expired' %}">
+          {% csrf_token %}
+          <i id="close" class="bx bx-x close"></i>
+          <div class="profile-text">
+            <img src="{% static 'images/Logo/Faveicon.png' %}" alt="">
+            <div class="text">
+              <span class="name">S2le</span>
+              <span class="profession">S2le manager</span>
+
+              <p>Subscribe 1.42$ per week, but risk-free. Try</p>
+
+            </div>
+          </div>
+          <div class="button">
+            <button id="close" class="cancel">Cancel</button>
+            <button class="send" type="submit" name="send">Send</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+  </section>
+
+  <script>
+    const section = document.querySelector("section"),
+      renewBtn = section.querySelector("#renewBtn"),
+      closeBtn = section.querySelectorAll("#close");
+
+    renewBtn.addEventListener("click", () => {
+      section.classList.add("show"); // Add the "show" class when the button is clicked
+    });
+
+    closeBtn.forEach(cBtn => {
+      cBtn.addEventListener("click", () => {
+        section.classList.remove("show");
+      });
+    });
+
+  </script>
+
+</body>
+
+</html>

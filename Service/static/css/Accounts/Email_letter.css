@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=K2D');
+
+*{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow-x:hidden;
+  scroll-behavior: smooth;
+} 
+
+body{
+  font-family: 'K2D', sans-serif;
+  color: var(--color-primary);
+}
+
+h1, p{
+  color:#CDCDCD;
+}
+
+
+.letter{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.letter_{
+  width: 55%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color:#132f33;
+  background-image: url('/static/images/Email/Pattern.png');
+  background-repeat: repeat;
+  background-size: contain;
+}
+
+.letter_ img{
+  width: 35%;
+  object-fit: cover;
+  height: 100%;
+}
+
+.welcoming_title{
+  display: flex;
+    flex-direction: column;
+    gap: 20px;
+    line-height: 30px;
+    /* padding: 0 70px; */
+    width: 50%;
+    margin: 0 auto;
+}
+
+
+.welcoming_title h1{
+  font-size: 40px;
+
+}
+
+.welcoming_title p {
+  font-size: 20px;
+}
+
+
+#signature{
+  width: 120px;
+  height: 80px;
+}
+
+
+@media screen and (min-width:280px) and (max-width:514px) {
+
+  .letter{
+    height: unset;
+  }
+
+  .letter_{
+    width: 100%;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .letter_ img{
+    width: 100%;
+  }
+
+  .welcoming_title{
+    width: 80%;
+    padding: 0 0 40px 0;
+
+  }
+
+}
+
+@media screen and (min-width:514px) and (max-width:790px) {
+  .letter_{
+    width: 100%;
+  }
+
+  .welcoming_title{
+    line-height: 25px;
+    /* padding: 0 70px; */
+    width: 50%;
+  }
+
+  .welcoming_title p {
+    font-size: 15px;
+}
+}

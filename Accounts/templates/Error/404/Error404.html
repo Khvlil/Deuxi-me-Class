@@ -1,0 +1,23 @@
+{% extends "Error/Errors.html" %}
+{% load static %}
+
+{% block title %}
+  Oops...!!
+{% endblock title %}
+
+{% block head %}
+  <link rel="stylesheet" href="{% static '/css/Accounts/Errors/Error404.css' %}"/>
+{% endblock head %}
+
+{% block error %}
+  <section class="Oops">
+    <div class="title">
+      <h1>Oops !</h1>
+        <h2>something went wrong</h2>
+          <h4>Error 404 page not found</h4>
+        <a href="{{ previous }}
+        " class="return_page">Return to page</a>
+      <a href="{% url 'Service:Home' user.user_ID %}" class="return_home_page">Return to Homepage</a>
+    </div>
+  </section>
+{% endblock error %}

@@ -1,0 +1,106 @@
+{% extends 'Categories.html' %}
+{% load static %}
+
+{% block title %}
+    Coding  
+{% endblock title %}
+
+{% block head %}
+    <link rel="stylesheet" type="text/css" href="{% static '/css/Categories/Coding.css' %}" />  
+{% endblock head %}
+
+
+{% block categories %}
+    {% if user.is_authenticated %}
+    <a data-aos="flip-right" href="{% url 'Lessons:math-informatique' user.uids %}#Cards" class="Cards swiper-slide" id="Code-Math">
+      <div class="text">
+        <h1>There no such<br>
+          thing as boring mathematics</h1>
+        <h4>Build your brand, make a meme, or explore your inner artist</h4>
+      </div>
+    </a>
+    {% else %}
+    <a data-aos="flip-right" href="{% url 'Lessons:math-informatique' user.uids %}#Cards" class="Cards swiper-slide" id="Code-Math">
+      <algodiv class="text">
+        <h1>There no such<br>
+          thing as boring mathematics</h1>
+        <h4>Build your brand, make a meme, or explore your inner artist</h4>
+      </div>
+    </a>
+    {% endif %}
+
+    {% if user.is_authenticated %}
+    <a data-aos="flip-left" href="{% url 'Lessons:algorithms' user.uids %}#Cards" class="Cards swiper-slide" id="Code-Algo">
+      <div class="text">
+        <h1>Algorithms for<br>learning algorithms</h1>
+        <h4>learn different types of data structures and algorithms and their implementations </h4>
+      </div>
+    </a>
+    {% else %}
+    <a data-aos="flip-left" href="{% url 'Lessons:algorithms' user.uids %}#Cards" class="Cards swiper-slide" id="Code-Algo">
+      <div class="text">
+        <h1>Algorithms for<br>learning algorithms</h1>
+        <h4>learn different types of data structures and algorithms and their implementations </h4>
+      </div>
+    </a>
+    {% endif %}
+
+    {% if user.is_authenticated %}
+    <a data-aos="flip-right" href="{% url 'Lessons:coding' user.uids %}#Cards" class="Cards swiper-slide" id="Code">
+      <div class="text">
+        <h1>For every student,
+          every classroom.
+          Real results</h1>
+        <h4>Our mission: to help people learn to code </h4>
+      </div>
+    </a>
+    {% else %}
+    <a data-aos="flip-right" href="{% url 'Lessons:coding' user.uids %}#Cards" class="Cards swiper-slide" id="Code">
+      <div class="text">
+        <h1>For every student,every classroom.
+          Real results</h1>
+        <h4>Our mission: to help people learn to code </h4>
+      </div>
+    </a>
+    {% endif %}
+{% endblock categories %}
+
+{% block grid %}
+
+<style>
+  .Categories .categories__{
+    display: grid;
+    grid-template-columns: repeat(3, auto);  
+  }
+</style>
+
+{% endblock grid %}
+
+{% block swip %}
+<script>
+  var swiper = new Swiper(".Categories", {
+    breakpoints: {
+      421:{
+        slidesPerView: 1,
+      },
+      520: {
+        slidesPerView: 2,
+      },
+      768: {
+        slidesPerView: 2,
+      },
+      1024: {
+        slidesPerView: 3,
+      },
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+</script>
+{% endblock swip %}

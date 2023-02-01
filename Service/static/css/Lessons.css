@@ -1,0 +1,38 @@
+@import url('http://fonts.cdnfonts.com/css/k2d');
+
+
+*{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow-x:hidden;
+  scroll-behavior: smooth;
+} 
+
+
+body{
+  font-family: 'K2D', sans-serif;
+  color: white;
+}
+
+a:visited{
+  color: white;
+}
+
+
+.Previous{
+  position: absolute;
+  top: 30px;
+  left: 10px;
+  font-size: 30px;
+  color: white;
+  z-index: 100;
+}
+

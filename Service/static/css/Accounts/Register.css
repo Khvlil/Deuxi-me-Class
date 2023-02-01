@@ -1,0 +1,611 @@
+@import url('https://fonts.googleapis.com/css2?family=K2D');
+
+*{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow-x:hidden;
+  scroll-behavior: smooth;
+} 
+
+:root{
+  --color-primary: #e84c4c;
+  --color-vote-button : #515151;
+
+  --container-width-lg: 100%;
+  --container-width-md: 90%;
+  --container-width-sm: 94%;
+}
+
+body{
+  font-family: 'K2D', sans-serif;
+  background-color: #160000;
+  color: var(--color-primary);
+}
+
+h3, h1, label, span ,h4, p, a{
+  color: black;
+}
+
+a:hover{
+  color: rgb(38, 38, 38);
+}
+
+.container{
+  height: 100vh;
+  margin: 0 auto;
+}
+
+.background{
+  background-size: cover;
+}
+
+/* Change the white to any color */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active  {
+    -webkit-box-shadow: 0 0 0 1.87em white inset !important;
+}
+
+
+
+/* Register flex */
+.Register .Register__{
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  width: 80%;
+  height: 97vh;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+
+}
+
+
+/* Register image side */
+.Register .Register__ .Register-portrait{
+  position: relative;
+  flex-basis: 50%;
+  height: 100%;
+  background-image: url("/static/images/Login/Register.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+/* Register image side paragraph */
+.Register .Register__ .Register-portrait .title{
+  position: absolute;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  padding: 0 15px 40px 15px;
+  gap: 1.87em;
+  bottom: 0;
+    left: 0;
+}
+
+/* Register image side title */
+.Register .Register__ .Register-portrait h2{
+  font-size: 2.93em;
+  font-weight: 800;
+}
+
+.Register .Register__ .Register-portrait p,h2{
+  color: white;
+}
+
+
+/* Register Form side */
+.Register .Register__ .Register-info{
+  position: relative;
+  flex-basis: 50%;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.Register .Register__ .Register-info .info__{
+  height: 100%;
+  overflow-y: auto;
+}
+
+/* Register Form flexbox side */
+.Register .Register__ .Register-info .info__ form{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 60%;
+  max-height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.Register .Register__ .Register-info .info__ form .welcome__ {
+  width: 100%;
+}
+
+/* Google and Github button  */
+.Register .Register__ .Register-info .info__ form .welcome__ .google-button a{
+  border-radius: 12px;
+  color: white;
+  background-color: #000;
+}
+
+.Register .Register__ .Register-info .info__ form .welcome__ .google-button a:hover{
+  color: white;
+  background-color: var(--color-primary);
+}
+
+
+.Register .Register__ .Register-info .info__ form .welcome__ h3{
+  font-size: 2em;
+  font-weight: 900;
+  text-align: start;
+  text-transform:capitalize;
+}
+
+.Register .Register__ .Register-info .info__ form .welcome__ p:nth-child(2){
+  color: rgb(51, 51, 51);
+  display: none;
+}
+
+/* Register Form "or" between line */
+.Register .Register__ .Register-info .info__ form .welcome__ #or span{
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-weight: 900;
+  width: 100%;
+}
+
+.Register .Register__ .Register-info .info__ form .welcome__ #or span::before,
+.Register .Register__ .Register-info .info__ form .welcome__ #or span::after {
+  content: '';
+  flex: 1;
+  border-bottom: 2px solid rgb(0, 0, 0);
+}
+
+.Register .Register__ .Register-info .info__ form .welcome__ #or span:not(:empty)::before {
+  margin-right: .25em;
+}
+
+.Register .Register__ .Register-info .info__ form .welcome__ #or span:not(:empty)::after {
+  margin-left: .25em;
+}
+
+/* Register animation Username and password */
+
+.Register .Register__ .Register-info .info__ form .user-box{
+  position: relative;
+  width: 100%;
+  padding: 0 0 17px 0;
+}
+
+
+
+#Username-box{
+  width: 100%;
+  background: url("/static/images/Icons/Username.png") no-repeat scroll 0px 13.5px;
+  background-size: 1.25em 1.25em;
+  padding-left: 2.06em;
+}
+
+#Email-box{
+  width: 100%;
+  background: url("/static/images/Icons/Email-Register.png") no-repeat scroll 0px 13.5px;
+  background-size: 1.25em 1.25em;
+  padding-left: 2.06em;
+}
+
+#Password-box{
+  width: 100%;
+  background: url("/static/images/Icons/Password-Register.png") no-repeat scroll 0px 13.5px;
+  background-size: 1.25em 1.25em;
+  padding-left: 2.06em;
+}
+
+#ConfirmedPassword-box{
+  width: 100%;
+  background: url("/static/images/Icons/Confirmed-password.png") no-repeat scroll 0px 13.5px;
+  background-size: 1.25em 1.25em;
+  padding-left: 2.06em;
+}
+
+.Register .Register__ .Register-info .info__ .user-box input {
+  position: relative;
+  font-size: 1em;
+  color: var(--color-primary);
+  border: none;
+  border-bottom: 1.8px solid var(--color-primary);
+  outline: none;
+  caret-color: transparent;
+  font-weight: bold;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box; 
+}
+
+.Register .Register__ .Register-info .info__ .user-box label {
+  position: absolute;
+  top:0;
+  left: 2.18em;
+  padding: 10px 0;
+  font-size: 1.12em;
+  font-weight: lighter;
+  color: black;
+  pointer-events: none;
+  transition: .2s;
+}
+
+
+.Register .Register__ .Register-info .info__ .user-box input:focus ~ label,
+.Register .Register__ .Register-info .info__ .user-box input:valid ~ label{
+    top: -1.25em;
+    left: 0;
+    font-weight: bold;
+    font-size: 0.75em;
+}
+
+.Register .Register__ .Register-info .info__ .login-parametre{
+  padding-bottom: 1.25em;
+}
+
+/* Register button */
+.Register .Register__ .Register-info .info__ .login-parametre .checking-terms label{
+  color: #000000;
+  font-size: 0.87em;
+  font-weight: bold;
+}
+
+
+.Register .Register__ .Register-info .info__ .login-parametre .checking-terms  input[type="checkbox"] {
+  border: 2px solid black;
+  opacity: 1;
+  position: relative;
+  vertical-align: middle;/*Newly added*/
+  accent-color: #204E4E;
+}
+
+.Register .Register__ .Register-info .info__ form .user-box span{
+  color: #e84c4c;
+  font-size: 0.81em;
+  font-weight: 900;
+}
+
+
+/* Register button */
+.Register .Register__ .Register-info .info__ button{
+  width: 100%;
+  height: 2.12em;
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+  font-size: 1.12em;
+  font-weight: 500;
+}
+
+
+.Register .Register__ .Register-info .info__ button:hover{
+  background-color: var(--color-primary);
+  transition: 0.3s;
+}
+
+/* Signe in link */
+.Register .Register__ .Register-info .info__ .sign-up{
+  margin: 0 auto;
+  padding: 0;
+  font-size: 25px;
+}
+
+.Register .Register__ .Register-info .info__ form .bottom{
+  display: none;
+}
+
+
+.Register .Register__ .Register-info .info__ h4{
+  font-size: 0.62em;
+  color: rgb(51, 51, 51);
+  font-weight: 700;
+}
+
+
+/* For all the link in the form */
+
+.Register .Register__ .Register-info .info__ a{
+  font-size: 0.93em;
+  font-weight: 900;
+  color: var(--color-primary);
+}
+
+.Register .Register__ .Register-info .info__ a:hover{
+  color: #000;
+}
+
+
+
+
+/* Responsive */
+@media only screen and (max-width:1286px){
+  .Register .Register__ .Register-info .info__ form {
+    width: 85%;
+  }
+}
+
+@media only screen and (max-width:1062px){
+  .Register .Register__ .Register-portrait{
+    flex-basis: 37%;
+  }
+
+  .Register .Register__ .Register-info{
+    flex-basis: 63%;
+  }
+
+  .Register .Register__ .Register-info .info__ h4 {
+    font-size: 0.52em;
+  }
+
+  .Register .Register__ .Register-info .info__ form {
+    width: 74%;
+  }
+
+  .Register .Register__ .Register-info .info__ form .user-box{
+    padding-bottom: 5px;
+  }
+}
+/* tablet, landscape iPad, lo-res laptops ands desktops */
+@media only screen and (max-width:962px) {
+  .Register .Register__{
+    width: 95%;
+    height: 95vh;
+  }
+
+  .Register .Register__ .Register-info .info__ form .welcome__ h3,p{
+    text-align: center;
+  }
+
+  .Register .Register__ .Register-portrait{
+    flex-basis: 37%;
+    padding: 10px 20px;
+    text-align: start;
+  }
+
+  .Register .Register__ .Register-portrait p{
+    text-align: start;
+  }
+
+  .Register .Register__ .Register-info{
+    flex-basis: 63%;
+  }
+
+  .Register .Register__ .Register-info .info__ form .user-box span{
+    font-size: 0.62em ;
+  }
+
+  .Register .Register__ .Register-info .info__ form {
+    width: 88%;
+  }
+
+  .Register .Register__ .Register-info .info__ .user-box input:focus ~ label,
+  .Register .Register__ .Register-info .info__ .user-box input:valid ~ label{
+      font-size: 0.9em;
+  }
+
+
+
+  .Register .Register__ .Register-info .info__ form .welcome__ .title{
+    justify-content: center;
+  }
+
+  .Register .Register__ .Register-info .info__ form .user-box span{
+    font-size: 0.88em ;
+  }
+  
+
+  .Register .Register__ .Register-info .info__ .Register-parametre{
+    padding-bottom: 0.75em;
+  }
+
+  .Register .Register__ .Register-info .info__ form .user-box{
+    padding: 0 0 0.81em 0;
+  }
+}
+/* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+@media only screen and (max-width:668px){
+  .Register .Register__ .Register-info .info__ form .user-box{
+    padding: 0 0 8px 0;
+  }
+
+  .Register .Register__ .Register-info .info__ form .welcome__ .title{
+    display: block;
+    width: 100%;
+
+  }
+
+  .Register .Register__ .Register-portrait{
+    background-image: url("/static/images/Login/Register-For-Mobile.jpg");
+    padding: 33px 51px;
+
+  }
+  
+  .Register .Register__ .Register-info .info__ form .bottom{
+    display: none;
+  }
+
+  .Register .Register__ .Register-info .info__ form .user-box span{
+    font-size: 0.88em ;
+  }
+  
+
+  .Register .Register__ .Register-info .info__ h4 {
+    font-size: 0.580em;
+}
+
+  .Register .Register__ .Register-info .info__ form .welcome__ .title span{
+    display: block;
+  }
+
+  .Register .Register__ .Register-info .info__ form .welcome__ .title img{
+    display: none;
+}
+
+}
+
+@media only screen and (max-width:575px){
+  .Register .Register__{
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+  }
+
+  .Register .Register__ .Register-portrait{
+    position: relative;
+    width: 100%;
+    background-image: url("/static/images/Login/Register-For-Mobile.jpg");
+  }
+
+  .Register .Register__ .Register-portrait h2{
+    position: absolute;
+    bottom: 0;
+  }
+
+  .Register .Register__ .Register-portrait p{
+    display: none;
+  }
+
+  .Register .Register__ .Register-info {
+    width: 100%;
+  }
+
+  .Register .Register__ .Register-info .info__ form{
+    position: absolute;
+    width: 70%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    margin: 0 auto;
+  }
+
+  .Register .Register__ .Register-info .info__ .user-box input:focus ~ label,
+  .Register .Register__ .Register-info .info__ .user-box input:valid ~ label{
+      font-size: 0.9em;
+  }
+
+
+
+  .Register .Register__ .Register-info .info__ form .user-box span{
+    font-size: 0.88em ;
+  }
+  
+
+  
+  .Register .Register__ .Register-info .info__ form .welcome__ .title img{
+    display: none;
+  }
+
+  .Register .Register__ .Register-info .info__ form .welcome__ .top{
+    display: none;
+  }
+
+  .Register .Register__ .Register-info .info__ form .bottom{
+    display: block;
+  }
+
+  .Register .Register__ .Register-info .info__ h4 {
+    font-size: 15px;
+  }
+
+
+}
+/* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+@media only screen and (max-width:481px){
+  .Register .Register__{
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+  }
+
+  .Register .Register__ .Register-portrait{
+    position: relative;
+    background-image: url("/static/images/Login/Register-For-Kindells-test.jpg");
+    width: 100%;
+  }
+
+  .Register .Register__ .Register-portrait h2{
+    position: absolute;
+    bottom: 0;
+  }
+
+  .Register .Register__ .Register-portrait p{
+    display: none;
+  }
+
+  .Register .Register__ .Register-info{
+    width: 100%;
+  }
+
+  .Register .Register__ .Register-info .info__ form{
+    width: 75%;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+
+  .Register .Register__ .Register-info .info__ .user-box input:focus ~ label,
+  .Register .Register__ .Register-info .info__ .user-box input:valid ~ label{
+      font-size: 0.9em;
+  }
+
+
+  .Register .Register__ .Register-info .info__ form .user-box span{
+    font-size: 0.88em ;
+  }
+  
+  .Register .Register__ .Register-info .info__ form .welcome__ .title h3 span{
+    display: block;
+  }
+
+  .Register .Register__ .Register-info .info__ form .welcome__ .title img{
+    display: none;
+  }
+
+  .Register .Register__ .Register-info .info__ form .user-box{
+    padding: 0 0 10px 0;
+  }
+
+  .Register .Register__ .Register-info .info__ form .welcome__ .top{
+    display: none;
+  }
+
+  .Register .Register__ .Register-info .info__ form .bottom{
+    display: block;
+  }
+
+  .Register .Register__ .Register-info .info__ h4 {
+    font-size: 15px;
+  }
+
+  .Register .Register__ .Register-info .info__ button {
+    width: 100%;
+    height: 100%;
+    padding: 3px 0;
+    font-size: 21px;
+  }
+}

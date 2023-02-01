@@ -1,0 +1,89 @@
+{% extends "Categories.html" %}
+{% load static %}
+
+{% block title %}
+  Language  
+{% endblock title %}
+
+{% block head %}
+  <link rel="stylesheet" type="text/css" href="{% static '/css/Categories/Language.css' %}" />
+{% endblock head %}
+
+{% block categories %}
+    {% if user.is_authenticated %}
+    <a data-aos="flip-left" href="{% url 'Lessons:english' user.uids %}#Cards" class="Cards swiper-slide" id="English">
+      <div class="text">
+        <h1>There no such<br>
+          thing as boring mathematics</h1>
+        <h4>Build your brand, make a meme, or explore your inner artist</h4>
+      </div>
+    </a>
+    {% else %}
+    <a data-aos="flip-left" href="{% url 'Lessons:english' user.uids %}#Cards" class="Cards swiper-slide" id="English">
+      <div class="text">
+        <h1>There no such<br>
+          thing as boring mathematics</h1>
+        <h4>Build your brand, make a meme, or explore your inner artist</h4>
+      </div>
+    </a>
+
+    {% endif %}
+    {% if user.is_authenticated %}
+    <a data-aos="flip-right" href="{% url 'Lessons:french' user.uids %}#Cards" class="Cards swiper-slide" id="French">
+      <div class="text">
+        <h1>There no such 
+          thing as boring mathematics</h1>
+        <h4>Build your brand, make a meme, or explore your inner artist.</h4>
+      </div>
+    </a>
+    {% else %}
+    <a data-aos="flip-right" href="{% url 'Lessons:french' user.uids %}#Cards" class="Cards swiper-slide" id="French">
+      <div class="text">
+        <h1>There no such 
+          thing as boring mathematics</h1>
+        <h4>Build your brand, make a meme, or explore your inner artist.</h4>
+      </div>
+    </a>
+    {% endif %}
+{% endblock categories %}
+
+{% block grid %}
+
+<style>
+  .Categories .categories__{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);  
+  }
+</style>
+
+{% endblock grid %}
+
+{% block swip %}
+<script>
+  var swiper = new Swiper(".Categories", {
+
+    breakpoints: {
+      421:{
+        slidesPerView: 1,
+      },
+      520: {
+        slidesPerView: 1,
+      },
+      768: {
+        slidesPerView: 1,
+      },
+      1024: {
+        slidesPerView: 2,
+      },
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+</script>
+{% endblock swip %}

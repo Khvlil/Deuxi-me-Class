@@ -1,0 +1,59 @@
+.Categories .categories__ #Code{
+  height: 100vh;
+  background-image: url("/static/images/Code/Code.jpg");
+  display: flex;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  justify-content: flex-end;
+  align-content: center;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  padding: 0 25px 100px 0;
+}
+
+.Categories .categories__ #Code-Algo{
+  background-image: url("/static/images/Code/Algo.jpg");
+  display: flex;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  justify-content: flex-end;
+  align-content: center;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  padding: 0 25px 100px 0;
+}
+
+
+.Categories .categories__ #Code-Math{
+  background-image: url("/static/images/Code/Math.jpg");
+  display: flex;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  justify-content: flex-end;
+  align-content: center;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  padding: 0 25px 100px 0;
+}
+
+
+.Categories .categories__ .text {
+  width: 50%;
+}
+
+
+.Previous iconify-icon[icon='bi:arrow-left-circle-fill']:hover{
+  filter: brightness(0) saturate(100%) invert(60%) sepia(36%) saturate(4849%) hue-rotate(353deg) brightness(95%) contrast(93%);
+}
+
+.swiper-button-next, .swiper-rtl .swiper-button-prev,
+.swiper-button-prev, .swiper-rtl .swiper-button-next, .swiper-button-next.swiper-button-disabled, .swiper-button-prev.swiper-button-disabled{
+  color: rgb(255, 255, 0) !important;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: rgb(255, 255, 0) !important;
+}

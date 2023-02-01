@@ -1,0 +1,122 @@
+{% extends "account/Authentication.html" %}
+{% load static %}
+{% load socialaccount %}
+
+{% block title %}
+    Register
+{% endblock title %}
+  
+{% block head %}
+    <link rel="stylesheet" href="{% static '/css/accounts/Register.css' %}"/>
+{% endblock head %}
+
+
+
+{% block main %}
+<main class="Register">
+  <div class="Register__">
+    <div class="Register-portrait">
+      <div class="title">
+        <h2>What is Lorem Ipsum?</h2>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's </p>
+      </div>
+    </div>
+
+    <div class="Register-info">
+      <div class="info__">
+        <form method="POST" id="form">
+          {% csrf_token %}
+
+          <div class="welcome__">
+            <h3 class="welcoming">Welcome back in s2all</h3>
+            <p>welcoeme back ,please enter your details</p>
+            <div class="sign-up top">
+              <h4 class="sign-in__">ALready have an account ? <a href="{% url 'Accounts:Login' %}">Sign in Now</a></h4>
+            </div>
+
+            <!-- Social Authentication Buttons -->
+            <div class="col s12 m6 offset-m3 center-align google-button google" style="padding:  10px 0 0 0;">
+              <a class="oauth-container btn darken-4" href="{% provider_login_url 'google' %}?next={{ request.path }}" style="width:100%; text-transform:none">
+                  <div class="left">
+                      <img width="28px" style=" margin-top:4.5px; margin-right:8px;" alt="Google sign-in" 
+                          src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" />
+                  </div>
+                  Login with Google
+              </a>
+            </div>
+            
+            <div class="col s12 m6 offset-m3 center-align google-button github" style="padding:  10px 0 0 0;">
+              <a class="oauth-container btn darken-4" href="{% provider_login_url 'github' %}?next={{ request.path }}" style="width:100%; text-transform:none">
+                  <div class="left">
+                      <img width="28px" style=" margin-top:4.5px; margin-right:8px;" alt="Google sign-in" 
+                          src="/static/images/Logo/Buttons/Github/Github.png" />
+                  </div>
+                  Login with Github
+              </a>
+            </div>
+
+          <p id="or" style="padding: 0 0 30px 0;">
+            <span class="line">or</span>
+          </p>
+          </div>
+
+
+      
+          <div class="user-box" id="Username-box">
+            <input id="Username" type="text" name="username"
+            required >
+            <label id="username">Username</label>  
+              <span id="username-Validation" class="right">{{ error_username }}</span>
+          </div>
+
+          <div class="user-box" id="Email-box">
+            <input id="Email" type="text" name="email" required >
+            <label id="email">Email Adress</label>
+            <span id="email-Validation" class="right error-email">{{ error_email }}</span>
+          </div>
+          
+          <div class="user-box" id="Password-box">
+            <input id="Password" type="password" name="password" required>
+            <label id="password">Password</label>
+            <span id="password-Validation" class="right"></span>
+
+          </div>
+
+          <div class="user-box" id="ConfirmedPassword-box">
+            <input id="Password_2" type="password" name="confirmed-password" required>
+            <label id="password_2">Confirmed Password</label>
+            <span id="password_2-Validation" class="right"></span>
+          </div>
+
+          <div class="login-parametre">
+            <div class="checking-terms">
+              <label style="font-size: 12px;">
+                <input type="checkbox" name="terms" id="check"/>I am a student in Multihexa school and I agree to the <a href="{% url 'Service:Policy' %}">S2alle terms and admin condition</a>
+              </label>
+            </div>
+          </div>
+
+            {% if request.Get.next %}
+              <button type="submit" id="Login-Button" name="next" value="{{ next }}">Log in</button>
+            {% else %}
+              <button type="submit" id="Login-Button" name="login">Log in</button>
+            {% endif %}
+
+          <div class="sign-up bottom">
+            <h4>ALready have an account ? <a href="{% url 'Accounts:Login' %}">Sign in Now</a></h4>
+          </div>
+
+
+
+        </form>
+      </div>
+    </div>
+  </div>
+</main>
+
+ 
+<script src="{% static '/js/Register.js' %}"></script>
+
+
+
+{% endblock main %}
