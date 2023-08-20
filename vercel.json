@@ -4,9 +4,20 @@
         "src": "S2ale/wsgi.py",
         "use": "@vercel/python",
         "config":{"runtime":"python3.9"}
+      },
+      {
+        "src": "build_files.sh",
+        "use": "@vercel/static-build",
+        "config": {
+          "distDir": "staticfiles"
+        }
       }
     ],
     "routes": [
+        {
+            "src": "/static/(.*)",
+            "dest": "/static/$1"
+          },
       {
         "src": "/(.*)",
         "dest": "S2ale/wsgi.py"
