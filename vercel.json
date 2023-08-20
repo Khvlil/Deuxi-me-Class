@@ -1,0 +1,15 @@
+{
+    "builds": [
+      {
+        "src": "S2ale/wsgi.py",
+        "use": "@vercel/python",
+        "config":{"runtime":"python3.9"}
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "S2ale/wsgi.py"
+      }
+    ]
+}
